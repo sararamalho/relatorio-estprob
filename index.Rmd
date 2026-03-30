@@ -1,15 +1,15 @@
 ---
-title: "Nome_Aluno(a)"
-image: "logo.png"
+title: "Sarah O. Ramalho"
+image: "271277064.jpg"
 links:
   - label: GitHub
     url: "https://github.com/"
   - label: Email
-    url: "mailto:name@gmail.com"
+    url: "mailto sarahxx@gmail.com"
   - label: Relatórios
     url: "./relatorio/index.html"
 output:
   postcards::jolla
 ---
  
-Descrição sobre o aluno(a)!
+Cursando Engenharia de Telecom
