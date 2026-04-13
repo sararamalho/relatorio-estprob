@@ -27,11 +27,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Mais informações sobre mim
 
-Acesse: [Nome do Aluno](info/index.html){target="_blank"}
+Acesse: [https://github.com/sararamalho/relatorio-estprob/](info/index.html){target="_blank"}
 
 # Página dos alunos da disciplina
 
-- Acesse: [Página dos alunos da disciplina Estatística e probabilidade](https://bendeivide.github.io/courses/estexp/estexp2025.1/#relat%C3%B3rio-dos-alunos){target="_blank"}
+- Acesse: [https://bendeivide.github.io/courses/epaec/normal2026.1/](https://bendeivide.github.io/courses/estexp/estexp2025.1/#relat%C3%B3rio-dos-alunos){target="_blank"}
 
 # Visão geral sobre os relatórios {.tabset .tabset-fade}
 

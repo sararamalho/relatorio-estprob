@@ -3,7 +3,7 @@ title: "Sarah O. Ramalho"
 image: "271277064.jpg"
 links:
   - label: GitHub
-    url: "https://github.com/"
+    url: "https://github.com/sararamalho/relatorio-estprob"
   - label: Email
     url: "mailto sarahxx@gmail.com"
   - label: Relatórios
