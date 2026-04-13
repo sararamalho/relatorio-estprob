@@ -28,18 +28,12 @@ execute:
 
 ## 📌 Introdução
 
-O domínio de ferramentas computacionais é essencial para a análise de dados, destacando-se a linguagem R como um ambiente robusto para estatística e visualização. Compreender seu funcionamento, comandos e estrutura é fundamental para uso eficiente e confiável.
-
-Este relatório aborda conceitos básicos do R, incluindo sua introdução, funcionamento, uso de comandos e do Ambiente Global, gerenciamento de arquivos (.RData e .Rhistory), criação de scripts e manipulação de objetos e estruturas de dados. Esses elementos são essenciais para organização, reprodutibilidade e análise correta dos dados
-
+Baseado nas 8 aulas do professor Ben Dêivide,será apresentado linguagem R e o Rstudio .
 > 
-
-
 
 ## 🎯 Objetivos
 
-Apresentar e consolidar os conceitos fundamentais do ambiente e da linguagem R, enfatizando seu funcionamento, organização e aplicação inicial em análise de dados.
-
+Apresentar e consolidar os conceitos fundamentais do ambiente e da linguagem R.
 
 ### Objetivo geral
 
@@ -49,73 +43,119 @@ Fixar os fundamentos da linguagem R
 
 - Compreender a lógica de funcionamento do ambiente R e sua estrutura interna;
 - Identificar e aplicar comandos básicos no Ambiente Global;
-- Entender o papel e a utilização dos arquivos .RData e .Rhistory;
 - Desenvolver habilidades na criação, organização e salvamento de scripts;
-- Reconhecer e manipular diferentes tipos de objetos e estruturas de dados;
-- Relacionar os conceitos estudados com a prática de análise estatística;
 - Promover o uso organizado, eficiente e reprodutível da linguagem.
 
 ---
 
 ## 📚  Fundamentação Teórica
 
-Para utilização do R e do RStudio:
+1. Apresentação do curso
 
--Instalação: instalar o R e, em seguida, o RStudio como ambiente de desenvolvimen
-to integrado (IDE).
--Abertura do RStudio: familiarizar-se com os painéis principais: Console, Script,
-Environment e Files/Plots/Packages.
--Criação de script: criar um novo arquivo .R para organizar os comandos (File → 
-New File → R Script).
--Execução de comandos: rodar linhas de código pelo botão Run ou atalho (Ctrl + 
-Enter), enviando comandos do script para o console.
--Gerenciamento do ambiente: observar objetos criados no Environment e utilizar 
-funções como rm() para limpeza quando necessário.
--Salvamento do trabalho: salvar scripts e, quando pertinente, o workspace
-(.RData) e histórico (.Rhistory).
--Instalação de pacotes: usar install.packages() e library() para expandir funcio
-nalidades.
+O curso EAR: R Básico tem como objetivo introduzir o uso da linguagem R para análise de dados, abordando desde conceitos iniciais até a manipulação de dados e organização do ambiente de trabalho. Os principais temas incluem: introdução ao R, instalação e primeiros passos, história da linguagem, funcionamento do ambiente, uso de comandos, gerenciamento do Ambiente Global, arquivos de sessão (.RData e .Rhistory), criação de scripts e estruturas de dados.
 
-Para a compreensão adequada do ambiente e da linguagem R, é necessário dominar 
-alguns conceitos fundamentais que estruturam seu funcionamento e utilização:
+2. Entendendo o curso EAR: R Básico
 
-* **Ambiente R (Environment):** espaço onde os objetos criados são armazenados
-durante a execução. O *Ambiente Global* é onde ficam os dados e variáveis ativos
-na sessão.
+Este curso é voltado para iniciantes e busca desenvolver a capacidade de:
 
-* **Comandos (Functions/Commands):** instruções escritas pelo usuário que execu
-tam operações, como cálculos, criação de gráficos ou manipulação de dados.
+utilizar o R como ferramenta de análise;
 
-* **Script:** arquivo com extensão `.R` que armazena comandos de forma organiza
-da, permitindo reutilização, edição e reprodutibilidade das análises.
+compreender sua lógica de funcionamento;
 
-* **Arquivos .RData:** armazenam objetos do ambiente (variáveis, vetores, data 
-frames), permitindo salvar e recuperar o estado do trabalho.
+organizar dados e comandos de forma eficiente;
 
-* **Arquivos .Rhistory:** registram o histórico de comandos executados, facilita
-ndo a revisão e repetição de operações.
+interpretar resultados estatísticos básicos.
 
-* **Objetos:** qualquer elemento armazenado no R (variáveis,vetores,funções,tabe
-las). São a base de toda manipulação de dados.
+3. Passos iniciais para utilização do R e RStudio
 
-* **Estruturas de dados:** formas de organizar os dados no R, como:
+Instalação:
+Baixe o R no site oficial (CRAN).
+Instale o RStudio (interface gráfica que facilita o uso do R).
+Abrindo o RStudio:
+Você verá 4 áreas principais:
+Console: onde os comandos são executados;
+Script: onde você escreve códigos;
+Environment: mostra objetos criados;
+Files/Plots/Packages: arquivos, gráficos e pacotes.
+Primeiro comando:
+2 + 2
+Criando um script:
+Clique em File → New File → R Script
+Escreva:
+x <- 10
+y <- 5
+x + y
+Execute com Ctrl + Enter
+4. História do R
 
-  * vetores (dados de um único tipo),
-  * matrizes (dados em formato bidimensional),
-  * data frames (tabelas com diferentes tipos de dados),
-  * listas (estruturas mais complexas e flexíveis).
+O R foi criado na década de 1990 por Ross Ihaka e Robert Gentleman, baseado na linguagem S. Seu objetivo era fornecer uma ferramenta livre para análise estatística. Hoje, é amplamente utilizado em ciência de dados, pesquisa e engenharia.
 
-* **Funcionamento do R:** o R opera de forma interpretada, executando comandos 
-linha a linha, armazenando resultados em objetos e permitindo análises iterati
-vas.
+5. Como o R trabalha?
 
-* **História do R:** linguagem derivada do S, desenvolvida para análise estatís
-tica e que evoluiu com forte colaboração da comunidade científica.
+O R funciona como um interpretador:
 
-Esses conceitos constituem a base para o uso eficiente da linguagem, permitindo 
-ao usuário compreender não apenas “como usar”, mas “como o sistema funciona”, o
-que é essencial para 
-análises confiáveis e bem estruturadas.
+executa comandos linha por linha;
+armazena resultados em objetos;
+permite testar e corrigir rapidamente.
+
+Exemplo:
+
+a <- 5
+b <- 2
+a * b
+6. Comandos no R e Ambiente Global
+Comandos: instruções dadas ao R
+Ambiente Global: onde ficam os objetos criados
+
+Exemplo:
+
+nota <- 8.5
+
+👉 O objeto nota aparecerá no Environment
+
+7. Arquivos .RData e .Rhistory
+.RData: salva todos os objetos criados
+.Rhistory: salva o histórico de comandos
+
+Salvar:
+
+save.image()     # salva .RData
+savehistory()    # salva histórico
+
+Carregar:
+
+load("arquivo.RData")
+8. Criando e salvando um Script
+Script = arquivo .R com comandos
+Permite:
+organização
+reutilização
+reprodutibilidade
+
+Salvar:
+
+File → Save As → nome.R
+9. Objetos e estruturas de dados
+
+No R, tudo é um objeto.
+
+🔹 Exemplos:
+
+Vetores:
+
+x <- c(1,2,3,4)
+
+Matriz:
+
+m <- matrix(1:6, nrow=2)
+
+Data frame (tabela):
+
+dados <- data.frame(nome=c("Ana","João"), idade=c(20,22))
+
+Lista:
+
+lista <- list(a=1, b="texto")
 
 ---
 
@@ -123,7 +163,6 @@ análises confiáveis e bem estruturadas.
 
 Foi assistido as 8 aulas do professor Ben Dêivide :
 - Apresentação do curso (cita e organiza os temas abordados nesse)
-- Entendendo o curso EAR: R básico
 - Entendendo o curso EAR: R básico
 - Passos iniciais para a utilização do R e Rstudio
 - Hitória do R 
@@ -137,26 +176,7 @@ Foi assistido as 8 aulas do professor Ben Dêivide :
 
 ## 🔍 Resultados e Discussão
 
-A análise dos arquivos .RData e .Rhistory evidenciou a importância do gerenciame
-nto de sessões. Enquanto o .RData permite restaurar objetos previamente criados,
-o .Rhistory contribui para a rastreabilidade dos comandos executados. Contudo,
-foi possível perceber que o uso indiscriminado desses arquivos pode gerar de
-pendência de estados anteriores, o que não é ideal em práticas que exigem repro
-dutibilidade rigorosa.De acordo com o livro R Básico, esses aspectos são discuti
-dos nos capítulos iniciais, especialmente aqueles relacionados à introdução ao 
-ambiente, manipulação de objetos e estruturas de dados (Capítulos 1 a 4). Nesses
-capítulos, são abordados temas como instalação, primeiros comandos, criação de 
-objetos e tipos de dados, geralmente apresentados nas páginas iniciais da obra 
-(aproximadamente entre as páginas 1 e 80, dependendo da edição).
-
-### 📊  Análise de Dados
-
-```{r}
-notas <- c(7.5, 8.0, 6.5, 9.0, 7.0, 8.5)
-mean(notas)
-sd(notas)
-summary(notas)
-```
+O curso de R básico apresenta, de forma integrada, os fundamentos da linguagem e do ambiente R, iniciando pelos passos de instalação e uso no RStudio, até a compreensão de sua estrutura e funcionamento. O R, desenvolvido a partir da linguagem S, atua como linguagem e ambiente de análise, executando comandos que manipulam objetos e estruturas de dados como vetores e tabelas. O Ambiente Global armazena os dados da sessão, enquanto arquivos como .RData e .Rhistory garantem salvamento e continuidade do trabalho. A criação de scripts organiza os comandos e permite reprodutibilidade. Assim, todos esses temas se conectam ao mostrar que o uso eficiente do R depende da compreensão de como os dados são criados, organizados e analisados dentro do sistema.
 
 ## 🧠 Considerações finais
 
@@ -171,10 +191,3 @@ e o uso de estruturas de dados, juntamente com arquivos como .RData e .Rhistory,
 evidenciam a importância da organização e da reprodutibilidade. Assim, conclui
 -se que o domínio desses conceitos é fundamental para a realização de análises 
 confiáveis e bem estruturadas.
-
-
-## Aprenda Quarto
-
-Acesse [Quarto](https://quarto.org/).
-
-## 📖 Referências
