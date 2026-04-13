@@ -1,7 +1,7 @@
 ---
 # Só mude aqui!!!!
 author: "Sarah Oliveira Ramalho"
-title: "Relatório de Aula Prática 01"
+title: "Relatório da catapulta"
 bibliography: referencias.bib
 # A partir daqui nao faca alteracoes!!!!!
 link-citations: true
@@ -28,19 +28,14 @@ execute:
 
 ## 📌 Introdução
 
-Este experimento, realizado em sala de aula, utilizou uma catapulta para analisar, sob a perspectiva da Estatística e Probabilidade, a distância percorrida por uma bola de ping pong em diferentes condições de lançamento. Foram considerados distintos níveis de fatores experimentais — O−, A+, B+ e A− — cada um representando uma configuração específica do sistema, como variações na força ou no ajuste do mecanismo da catapulta.
+Com ajuda do professor e mais outros 5 colegas realizamos com um experimento que consistia em lançar uma bola de ping pong a partir de uma catapulta e com isso medir a distância atingida pela por essa bola procurando analisar a variação de distância percorrida pela mesma.  
 
-A partir de lançamentos repetidos, buscou-se avaliar a influência desses fatores nos resultados, permitindo o estudo de medidas como média e variabilidade, além da comparação entre os diferentes grupos de valores. Mesmo sob condições controladas, observou-se a presença de aleatoriedade, evidenciando a importância da análise estatística para interpretar os dados experimentais e compreender a influência das variáveis envolvidas.  
-
-> Exemplo: análise da variabilidade em experimentos físicos utilizando uma catapulta.
-
+A partir de lançamentos repetidos, buscou-se avaliar a influência desses fatores nos resultados, permitindo analisar uma mudança  no comprimento percorrido pela bola em questão além da comparação entre os diferentes grupos de valores. Mesmo sob condições controladas, observou-se a presença de aleatoriedade, evidenciando a importância da análise estatística para interpretar os dados experimentais.  
 
 
 ## 🎯 Objetivos
 
 Coletar e organizar dados experimentais provenientes de lançamentos repetidos;
-
-Calcular medidas estatísticas, como média e dispersão, para cada nível dos fatores;
 
 Comparar os resultados entre os diferentes grupos, identificando variações no desempenho;
 
@@ -48,55 +43,17 @@ Avaliar a influência de cada configuração da catapulta sobre a distância alc
 
 Compreender o papel da aleatoriedade e das incertezas nos resultados experimentais.
 
-Dessa forma, o experimento visa desenvolver a capacidade de análise crítica de dados e a interpretação estatística de fenômenos físicos reais.
+Dessa forma, o experimento visa desenvolver a capacidade de análise crítica de dados
 
 ### Objetivo geral
 
-Analisar, por meio de métodos estatísticos, a influência dos diferentes níveis dos fatores experimentais (O−, A+, B+ e A−) como também do influxo de forças fundamentais e outras variantes na distância percorrida pela bolinha lançada pela catapulta, identificando padrões, variações e a presença de aleatoriedade nos resultados obtidos.
+Lançar a bola por meio da catapulta sob as mesmas condições 40 vezes e estudar a mudança das distâncias.
 
 ### Objetivos específicos
 
 - Coletar dados experimentais  
-- Aplicar estatística descritiva  
-- Construir gráficos  
+
 - Interpretar resultados  
-
----
-
-## 📚  Fundamentação Teórica
-
-Apresente os conceitos principais:
-
-1) Amostragem
-2) Média
-3) Variância
-4) Desvio padrão
-5) Resultado final
-
-$$
-\bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i
-$$
-1) Tamanho da amostra (n)
-
- n = 40
-
-2) Média (x) 
-
-x  = 77,81/40 = 1,945≈1,95 
-
-3) Variância amostral (s2) 
-
-s^2= ∑(xi−x)^2 / n -1 
-s^2 = 2,5779 / 39
-    = 0,0661   ---> s≈0,26
-​
-4) Desvio padrão (s)
-
-s =0,257≈0,26
-
-5) Resultado final (forma padrão)
-
-d=(1,95±0,26)
 
 ---
 
@@ -122,14 +79,8 @@ antada (basicamente o que o D fez só que nessa ferramenta ).
 
 ## 🔍 Resultados e Discussão
 
-n | 1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
-26 27 28 29 30 31 32 33 34 35 36 37 38 39 40
+As causa de variações no resultado foram:
 
-d | 1,96 1,95 1,99 1,93 2,05 2,13 2,8 1,99 2,5 2,8 1,99 1,88 2,01 1,97 2 1,72 
-1,86 1,95 1,92 2,03 1,71 1,64 1,87 1,96 1,93 1,77 1,95 1,93 1,98 1,96 1,98 1,68 
-1,82 1,84 1,9 1,87 1,67 1,51 1,68 1,72
-
-As causa de variações no resultado :
 1. Variação na inclinação da catapulta
 Fator B (ângulo de lançamento)
 𝐵+=100 (Esse é o ângulo do braço da catapulta) o alcance máximo é ≈ 45°
@@ -145,25 +96,46 @@ quando a bola caía, ela balançava a fita, alterando a distância até a catapu
 muitas vezes a condição 5. alterava.
 
 
-
-Procure não apenas descrever, mas **interpretar os dados**.
-
-### 💬 Exemplo de como citar uma referência bibliográfica
-
-Depois de inserido as informaçõe no arquivo **referencias.bib**, use:
-
-- Segundo @Rbasico2022
-- Tudo é um objeto em R [@Rbasico2022]
-
 ### 📊  Análise de Dados
 
+O lançamento foram a quatidade de vezes que a bolda foi lançada e a distância foi a distância alcançada pela mesma :
+
+
 ```{r}
-lançamento <- c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,
+lancamento <- c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,
                 25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40)
 distancia  <- c(1.96,1.95,1.99,1.93,2.05,2.13,2.8,1.99,2.5,2.8,1.99,1.88,2.01,
                 1.97,2.0,1.72,1.86,1.95,1.92,2.03,1.71,1.64,1.87,1.96,1.93,1.77,
                 1.95,1.93,1.98,1.96,1.98,1.68,1.82,1.84,1.9,1.87,1.67,1.51,1.68,1.72)
+dados <- data.frame(lancamento, distancia)
+
+dados
 ```
+
+## 📚  Fundamentação Teórica
+
+Apresente os conceitos principais:
+
+1)Quantidade de amostras
+2) Média
+4) Mediana
+5) Moda
+
+1) Tamanho da amostra (n)
+
+n = 40
+
+2) mean(distancia) or sum(distancia) / length(distancia)
+
+3) median(distancia) or sort(distancia)
+
+4) moda <- function(x) {
+  ux <- unique(x)
+  ux[which.max(tabulate(match(x, ux)))]
+}
+
+moda(distancia)
+
 
 ## 🧠 Considerações finais
 
@@ -172,11 +144,3 @@ O experimento atingiu seu objetivo ao permitir a análise da influência de dife
 Observou-se, com isso,que o ângulo de lançamento, a força aplicada, o atrito (devido ao pó de giz) e erros de medição e comunicação impactaram diretamente os dados. Como aprendizado, destaca-se a importância do controle experimental e da análise estatística na interpretação de resultados reais.
 
 A qualidade dos dados foi suficiente, porém com dispersão elevada, indicando a presença de erros experimentais. Para melhorias, recomenda-se padronizar o lançamento, fixar corretamente a trena e reduzir interferências durante a coleta dos dados.
-
-Evite repetir apenas os resultados; foque nas **conclusões e reflexões** .
-
-## Aprenda Quarto
-
-Acesse [Quarto](https://quarto.org/).
-
-## 📖 Referências
