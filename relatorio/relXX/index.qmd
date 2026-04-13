@@ -1,6 +1,6 @@
 ---
 # Só mude aqui!!!!
-author: "Nome do Aluno"
+author: "Sarah O. Ramalho"
 title: "Relatório de Aula Prática XX"
 bibliography: referencias.bib
 # A partir daqui nao faca alteracoes!!!!!
