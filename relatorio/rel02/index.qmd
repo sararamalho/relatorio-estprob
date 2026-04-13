@@ -50,23 +50,10 @@ Fixar os fundamentos da linguagem R
 
 ## 📚  Fundamentação Teórica
 
-1. Apresentação do curso
+   O curso EAR: R Básico tem como objetivo introduzir o uso da linguagem R para análise de dados, abordando desde conceitos iniciais até a manipulação de dados e organização do ambiente de trabalho. Os principais temas incluem: introdução ao R, instalação e primeiros passos, história da linguagem, funcionamento do ambiente, uso de comandos, gerenciamento do Ambiente Global, arquivos de sessão (.RData e .Rhistory), criação de scripts e estruturas de dados.
 
-O curso EAR: R Básico tem como objetivo introduzir o uso da linguagem R para análise de dados, abordando desde conceitos iniciais até a manipulação de dados e organização do ambiente de trabalho. Os principais temas incluem: introdução ao R, instalação e primeiros passos, história da linguagem, funcionamento do ambiente, uso de comandos, gerenciamento do Ambiente Global, arquivos de sessão (.RData e .Rhistory), criação de scripts e estruturas de dados.
 
-2. Entendendo o curso EAR: R Básico
-
-Este curso é voltado para iniciantes e busca desenvolver a capacidade de:
-
-utilizar o R como ferramenta de análise;
-
-compreender sua lógica de funcionamento;
-
-organizar dados e comandos de forma eficiente;
-
-interpretar resultados estatísticos básicos.
-
-3. Passos iniciais para utilização do R e RStudio
+ Passos iniciais para utilização do R e RStudio
 
 Instalação:
 Baixe o R no site oficial (CRAN).
