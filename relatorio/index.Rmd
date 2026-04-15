@@ -27,7 +27,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Mais informações sobre mim
 
-Acesse: [https://github.com/sararamalho/relatorio-estprob/](info/index.html){target="_blank"}
+Acesse: [Sarah Ramalho](https://github.com/sararamalho/relatorio-estprob/){target="_blank"}
 
 # Página dos alunos da disciplina
 
@@ -166,6 +166,6 @@ Relatórios desenvolvidos:
 
 - [Relatório 01 (31/03/2026)](rel01/index.html){target="_blank"}
 - [Relatório 02 (03/04/2026)](rel02/index.html){target="_blank"}
-- [Relatório 03 (XX/XX/XXXX)](rel03/index.html){target="_blank"}
+- [Relatório 03 (14/04/2026)](rel03/index.html){target="_blank"}
 - [Relatório 04 (XX/XX/XXXX)](rel04/index.html){target="_blank"}
 - ...

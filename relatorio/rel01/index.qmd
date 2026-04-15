@@ -116,7 +116,7 @@ dados
 
 Apresente os conceitos principais:
 
-1)Quantidade de amostras
+1) Quantidade de amostras
 2) Média
 4) Mediana
 5) Moda
@@ -129,13 +129,32 @@ n = 40
 
 3) median(distancia) or sort(distancia)
 
-4) moda <- function(x) {
+
+```{r}
+moda <- function(x) {
   ux <- unique(x)
   ux[which.max(tabulate(match(x, ux)))]
 }
-
 moda(distancia)
 
+```
+
+Exemplo se utilizasse o leem:
+
+```{r}
+library(leem)
+
+distancia |>
+  new_leem(variable = 2) |>
+  tabfreq() |>
+  mpos()
+```
+
+Considerando $x_i$ o í-esimo elemento de uma amostra de tamanho $n$, a média aritmética é dada por:
+
+$$
+\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i
+$$
 
 ## 🧠 Considerações finais
 
