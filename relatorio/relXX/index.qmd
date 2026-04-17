@@ -25,7 +25,7 @@ execute:
 ---
 
 
-## 📌 Introdução
+### 📌 Introdução
 ## Apresentação do Experimento
 
 Este relatório consiste em estudar o experimento feito com uma catapulta, em que a partir de 40 lançamentos de uma bolinha por grupo, sob diferentes configurações dos fatores (A+, A−, O−, B+) 
@@ -87,14 +87,13 @@ kable(tabela_original, caption = "Distâncias originais")
 
 ```
 
-A distância a partir do pé da catapulta (Dist_pé) foi medida para cada lançamento (N). A partir desses valores, calculou-se a distância total utilizando a expressão:
+### A distância a partir do pé da catapulta (Dist_pé) foi medida para cada lançamento (N). A partir desses valores, calculou-se a distância total utilizando a expressão:
 
 $$
 Dist_{total} = Dist_{pé} + 2.35
 $$
-Os resultados foram organizados em função da ordem dos lançamentos.
+### Os resultados foram organizados em função da ordem dos lançamentos.
 ```{r}
-
 library(knitr)
 
 distancia_nova <- distancia + 2.35
@@ -103,9 +102,12 @@ N <- 1:length(distancia)
 # Criando matriz diretamente (melhor que data.frame aqui)
 tabela <- rbind(
   "Dist_pé" = distancia,
-  "Com +2.35" = distancia_nova
+  "Dist_total" = distancia_nova
 )
+```
 
+## A seguir, os cálculos da frequência de cada valor
+```{r}
 # calcular frequência de cada valor
 freq <- table(distancia_nova)
 
@@ -134,7 +136,7 @@ kable(tabela_x, caption = "Tabela horizontal lançamentos, e frequências")
       
 ```
 
-Calculando 
+## Calculando 
 
 ### Mediana
 
@@ -177,7 +179,7 @@ cat("Moda =", moda(distancia_nova))
 
 As mudanças nos valores apresentados se deram por fatores como 
 
-### Força Elástica
+## Força Elástica
 
 A força elástica é dada pela Lei de Hooke:
 
@@ -204,8 +206,151 @@ Essa força foi a causa principal da variação dos valores, somado a outros fat
 
 Na jogada 22,decidimos escalonar o chão com giz,pois assim ficaria melhor de visualisar onde a bola caiu.Sobre a visão de onde a bola tenha caido no chão,não fez grande efeito na distância,não teve muita alteração como os outros que mencionei.
 
+## Medidas de assimetria e curtose
 
-## 🧠 Considerações finais
+### Assimetria (skewness):
 
+indica o grau de inclinação da distribuição:
 
+Assimetria positiva: cauda mais longa à direita (valores altos mais dispersos);
+Assimetria negativa: cauda mais longa à esquerda;
+Assimetria próxima de zero: distribuição aproximadamente simétrica.
+
+### Curtose (kurtosis): 
+
+Mede o grau de concentração dos dados em torno da média:
+
+Curtose alta (leptocúrtica): dados mais concentrados e presença de picos;
+Curtose baixa (platicúrtica): dados mais espalhados;
+Curtose próxima da normal (mesocúrtica): comportamento semelhante à distribuição normal.
+
+## A seguir,as fórmulas e cálculos para cada:
+Onde:
+
+(x_i) são os valores observados
+(\bar{x}) é a média
+(s) é o desvio padrão
+(n) é o número de observações
+
+$$
+("========== FÓRMULAS ==========")
+$$
+### A assimetria é dada por:
+
+$$
+Sk = \frac{1}{n} \sum_{i=1}^{n} \left(\frac{x_i - \bar{x}}{s}\right)^3
+$$
+### A curtose é dada por:
+
+$$
+K = \frac{1}{n} \sum_{i=1}^{n} \left(\frac{x_i - \bar{x}}{s}\right)^4
+$$
+```{r}
+library(e1071)
+
+assimetria <- skewness(distancia)
+curtose <- kurtosis(distancia)
+
+cat(sprintf("Assimetria: %.3f\n", assimetria))
+cat(sprintf("Curtose: %.3f\n", curtose))
+```
+
+##  Análise de cada:
+
+### Assimetria = -1.94
+
+👉 Negativa forte
+
+✔ Significa:
+
+cauda à esquerda
+muitos valores menores extremos
+dados puxados para valores baixos
+
+📌 Interpretação no experimento:
+
+Alguns lançamentos tiveram distâncias bem menores que o padrão, possivelmente por falhas como menor força, erro de ângulo ou interferência externa.
+
+###  Curtose = 5.294
+
+Há um excesso de curtose, pois ela é > 3 , logo classifica - se como curtose Leptocúrtica
+
+O que isso significa na prática
+
+Pico mais alto que o normal
+Muitos valores próximos da média
+
+Caudas pesadas
+Presença de valores extremos (outliers)
+
+###  Agora vem a parte importante (interpretação física):
+
+##### Existência de lançamentos muito diferentes
+
+Exemplo:
+
+alguns valores altos (2.8, 2.5)
+outros bem baixos (1.5, 1.6)
+
+O que gera caudas pesadas
+
+#### Concentração em torno de um valor médio
+
+maioria dos lançamentos:
+
+perto de ~1.9
+
+Isso cria o pico alto
+
+#### Falta de controle experimental :
+
+variação de força
+variação de ângulo
+erro humano
+posição da trena
+
+##### Pequenas variações → grandes desvios
+
+## Conclusão 
+Por meio desse experimento, foi possível entender, de forma visual como minúcias causam pequenas variações, e erros humanos são muito influenciaveis na medida que pensamos manter a mesma precisão,mesma força, no caso de Emily, quando não percebemos que a mesa tinha deslocado, etc, isso causa grande efeito nos dados.E, além disso, foi imprensidivel fazer análises estatísticas, como media,mediana e moda, e analisa -las no conjunto de dados. De forma análoga, analisando os dados, quanto a precisão, chega-se a conclusão de que : 
+
+## A mediana tende a ser a medida mais precisa para representar as distâncias
+
+Pois : seus dados apresentam (como já vimos):
+
+valores extremos (ex: 2.8, 2.5, 1.5…)
+curtose alta (≈ 5,29)
+isso indica outliers
+
+### Media:
+✔Vantagem:
+usa todos os dados
+Problema:
+sensível a valores extremos
+
+👉alguns lançamentos muito altos/baixos puxam a média
+
+### Mediana (mais robusta)
+
+Valor central dos dados ordenados
+
+✔Vantagens:
+não é afetada por outliers
+representa melhor o “comportamento típico”
+
+👉Ideal para o xperimento
+
+### Moda
+
+👉valor mais frequente
+
+Problema:
+seus dados são contínuos
+dificilmente há repetições exatas
+
+Pouco útil aqui
+
+## A seguir, algumas imagens do experimento :
+
+![imagem da bola posicionada na catapulta](imagens/trena.png)
 
