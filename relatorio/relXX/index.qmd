@@ -350,7 +350,4 @@ dificilmente há repetições exatas
 
 Pouco útil aqui
 
-## A seguir, algumas imagens do experimento :
-
-![imagem da bola posicionada na catapulta](imagens/trena.png)
 
