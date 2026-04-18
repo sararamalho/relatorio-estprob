@@ -1,0 +1,365 @@
+---
+# Só mude aqui!!!!
+author: "Sarah O. Ramalho"
+title: "Relatório de Aula Prática 03"
+bibliography: referencias.bib
+# A partir daqui nao faca alteracoes!!!!!
+link-citations: true
+csl: associacao-brasileira-de-normas-tecnicas-ipea.csl
+subtitle: "<a href='https://bendeivide.github.io/courses/epaec/' target='_blank'>Estatística e Probabilidade</a> </br> <a href='https://bendeivide.github.io' target='_blank'>Prof. Ben Dêivide (DEFIM/CAP/UFSJ)</a>"
+include-before-body: header.html
+date: today
+lang: pt-BR
+format:
+  html:
+    toc: true
+    number-sections: true
+    theme: bootstrap
+    #css: styles.css
+    code-fold: true
+    code-tools: true
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+
+### 📌 Introdução
+
+## Apresentação do Experimento
+
+Este relatório consiste em estudar o experimento feito com uma catapulta, em que a partir de 40 lançamentos de uma bolinha por grupo, sob diferentes configurações dos fatores (A+, A−, O−, B+) 
+O experimento evidenciou a importância do controle das variáveis,e do uso de ferramentas computacionais na análise estatística, além de destacar possíveis falhas experimentais que impactam os resultados.
+
+## 🎯 Objetivos
+
+Entender a variação dos valores mesmo sob as mesmas condições de lançamento.
+
+### Objetivo geral
+
+Desenvolver uma análise estatística nos estudantes de engenharia com base nos dados experimentais, podendo eles chegar a uma conclusão matemática da causa das variações nos valores e entender como minucias são capazes de gerar mudanças.
+
+### Objetivos específicos
+
+ ## Objetivos Específicos
+
+Coletar e organizar dados experimentais provenientes dos lançamentos da catapulta;
+
+Investigar a influência dos fatores experimentais (A+, A−, O−, B+) na variabilidade dos dados;
+
+Identificar e interpretar a presença de assimetria e curtose na distribuição das distâncias;
+
+Avaliar o impacto de pequenas variações (ângulo, força, atrito, erro humano) nos resultados obtidos;
+
+---
+
+## 📚  Fundamentação Teórica
+
+Baseia-se na Estatística Descritiva, voltada à organização, análise e interpretação de dados quantitativos. São utilizadas medidas de posição (média e mediana) para representar valores centrais e medidas de dispersão (variância e desvio padrão) para avaliar a variabilidade dos resultados.
+A comparação entre dados agrupados e não agrupados evidencia possíveis perdas de precisão ao agrupar valores contínuos. Além disso, as medidas de assimetria e curtose permitem analisar a forma da distribuição dos dados. O estudo também considera a influência de erros experimentais, como variações na execução e na medição, destacando a importância do uso da linguagem R para realizar análises de forma precisa e organizada.
+---
+
+## ⚙️ Metodologia
+
+Primeiramente,a carapulta foi posicionada numa mesa plana (mesa escolar),colou-se um sarrafo (aparelho que fixou a catapulta nessa superfície ) e usou uma fita de medição(trena) que começou no ponto final da catapulta até o pé de uma mesa que 2,35m, para ficar mais fácil de medir,evitando que a fita balance quando a pola caisse e dado que foi notado,por meio de dois experimentos teste que em geral quando a bola era lançada ela caia ou no rumo dele ou um pouco depois.
+
+No final apenas se adicionou os 2,35m para dar a distância total a partir da cataputa até onde a bola caiu.Quando a bola caia no chão,Esse pé da mesa passava a ser o ponto inicial da fita (pois ela caia um pouco depois dele) e depois era adicionar esses 2,35 a distância a mais, que apartir desse ponto deu.
+Dividimo-nos em funcionalidades - Emily ficou sendo responsável por lançar a bola por meio da catapulta,o professor (Ben Dêivide) fez o processo descrito da fita e ficou visualisando onde a bola caia e dizendo em voz alta onde a distância a partir do pé da mesa ao lado (2,35m da catapulta) que a bola caiu para Sarah anotar.Outro estudante ficou ajudando Ben Dêivide, ao disutir a visão dele onde a bola caiu, para ver se batia com a do professor. 
+
+---
+
+## A seguir,serão mostradas algumas imagens ilustrativas de tal experimentro :
+
+### Niveis da catapulta:
+![](imagens/niveis_catapul.png)
+
+### Bola sobre a catapulta:
+![](imagens/bola.png)
+
+### Catapulta posicionada sobre a mesa
+![](imagens/mesa.png)
+
+### Medição da distância percorrida pela bola depois do pé da mesa :
+![](imagens/trena.png)
+
+## 🔍 Resultados e Discussão
+A seguir será mostrado uma tabela com os dados do lançamento. A começar pelos lançamentos contados a partir do pé da careira(2,35m da catapulta) :
+
+```{r}
+library(knitr)
+
+distancia <- c(
+  58, 61.2, 51.2, -7.5, 55.0, 36.5, 60.0, 48.5, 45.0, 41.0,
+  45.0, 58.0, 62.0, 51.0, 52.5, 52.0, 60.5, 64.0, 61.2, 56.2,
+  72.5, 70.5, 65.8, 62.2,
+  54.1, 61.5, 52.3, 48.0,
+  28.8, 58.4, 52.7, 46.8, 43.0, 61.2, 22.4, 55.0, 57.4, 33.7,
+  52.4
+)
+tabela_original <- rbind(Distancia = distancia)
+kable(tabela_original, caption = "Distâncias originais")
+
+```
+
+### A distância a partir do pé da catapulta (Dist_pé) foi medida para cada lançamento (N). A partir desses valores, calculou-se a distância total utilizando a expressão:
+
+$$
+Dist_{total} = Dist_{pé} + 2.35
+$$
+### Os resultados foram organizados em função da ordem dos lançamentos.
+```{r}
+library(knitr)
+
+distancia_nova <- distancia + 2.35
+N <- 1:length(distancia)
+
+# Criando matriz diretamente (melhor que data.frame aqui)
+tabela <- rbind(
+  "Dist_pé" = distancia,
+  "Dist_total" = distancia_nova
+)
+```
+
+## A seguir, os cálculos da frequência de cada valor
+```{r}
+# calcular frequência de cada valor
+freq <- table(distancia_nova)
+
+# associar frequência a cada observação
+freq_individual <- freq[as.character(distancia_nova)]
+
+# Gerando tabela horizontal
+kable(
+  tabela,
+  col.names = paste("N", N)
+)
+
+# calcular frequência de cada valor
+freq <- table(distancia_nova)
+
+# associar frequência a cada observação
+freq_individual <- freq[as.character(distancia_nova)]
+
+# montar tabela horizontal
+tabela_x <- rbind(
+  Distancia = as.numeric(names(freq)),
+  Frequencia = as.numeric(freq)
+)
+
+kable(tabela_x, caption = "Tabela horizontal lançamentos, e frequências")
+      
+```
+
+## Calculando 
+
+### Mediana
+
+$$
+Md = \frac{x_{\frac{n}{2}} + x_{\frac{n}{2}+1}}{2}
+$$
+
+Resultado:
+
+```{r}
+cat("Mediana =", median(distancia_nova))
+```
+
+### Desvio padrão
+
+$$
+s = \sqrt{\frac{1}{n-1} \sum_{i=1}^{n} (x_i - \bar{x})^2}
+$$
+
+Resultado:
+
+```{r}
+cat("Desvio padrão =", sd(distancia_nova))
+```
+
+###  Moda
+
+$$
+Mo = \text{valor mais frequente}
+$$
+
+Resultado:
+```{r}
+moda <- function(x){
+  ux <- unique(x)
+  ux[which.max(tabulate(match(x, ux)))]
+}
+cat("Moda =", moda(distancia_nova))
+```
+
+As mudanças nos valores apresentados se deram por fatores como 
+
+## Força Elástica
+
+A força elástica é dada pela Lei de Hooke:
+
+$$
+F = -k \cdot x
+$$
+```{r}
+library(knitr)
+
+k <- 200
+x <- 0.05
+F <- -k * x
+
+kable(data.frame(
+  Constante_k = k,
+  Deformacao_x = x,
+  Forca = F
+), caption = "Cálculo da força elástica")
+```
+
+Ao puxar o elástico, armazena-se energia potencial elástica que é transformada em movimento quando solta.Possivelmente, nos lançamentos mais baixos, como no N=4 e N=35,pode ser que ela não tenha puxado totalmente o elástico,causando grande mudança da media das distâncias.
+
+Essa força foi a causa principal da variação dos valores, somado a outros fatores,como atrito do ar , a mesa que deu uma deslocada em sentido horário em algum momento,durante esse lançamentos, e o sarrafo que saiu no 7 arremeço que foram mais influentes nas variações das distâncias.
+
+Na jogada 22,decidimos escalonar o chão com giz,pois assim ficaria melhor de visualisar onde a bola caiu.Sobre a visão de onde a bola tenha caido no chão,não fez grande efeito na distância,não teve muita alteração como os outros que mencionei.
+
+## Medidas de assimetria e curtose
+
+### Assimetria (skewness):
+
+indica o grau de inclinação da distribuição:
+
+Assimetria positiva: cauda mais longa à direita (valores altos mais dispersos);
+Assimetria negativa: cauda mais longa à esquerda;
+Assimetria próxima de zero: distribuição aproximadamente simétrica.
+
+### Curtose (kurtosis): 
+
+Mede o grau de concentração dos dados em torno da média:
+
+Curtose alta (leptocúrtica): dados mais concentrados e presença de picos;
+Curtose baixa (platicúrtica): dados mais espalhados;
+Curtose próxima da normal (mesocúrtica): comportamento semelhante à distribuição normal.
+
+## A seguir,as fórmulas e cálculos para cada:
+Onde:
+
+(x_i) são os valores observados
+(\bar{x}) é a média
+(s) é o desvio padrão
+(n) é o número de observações
+
+$$
+("========== FÓRMULAS ==========")
+$$
+### A assimetria é dada por:
+
+$$
+Sk = \frac{1}{n} \sum_{i=1}^{n} \left(\frac{x_i - \bar{x}}{s}\right)^3
+$$
+### A curtose é dada por:
+
+$$
+K = \frac{1}{n} \sum_{i=1}^{n} \left(\frac{x_i - \bar{x}}{s}\right)^4
+$$
+```{r}
+library(e1071)
+
+assimetria <- skewness(distancia)
+curtose <- kurtosis(distancia)
+
+cat(sprintf("Assimetria: %.3f\n", assimetria))
+cat(sprintf("Curtose: %.3f\n", curtose))
+```
+
+##  Análise de cada:
+
+### Assimetria = -1.94
+
+👉 Negativa forte
+
+✔ Significa:
+
+cauda à esquerda
+muitos valores menores extremos
+dados puxados para valores baixos
+
+📌 Interpretação no experimento:
+
+Alguns lançamentos tiveram distâncias bem menores que o padrão, possivelmente por falhas como menor força, erro de ângulo ou interferência externa.
+
+###  Curtose = 5.294
+
+Há um excesso de curtose, pois ela é > 3 , logo classifica - se como curtose Leptocúrtica
+
+O que isso significa na prática
+
+Pico mais alto que o normal
+Muitos valores próximos da média
+
+Caudas pesadas
+Presença de valores extremos (outliers)
+
+###  Agora vem a parte importante (interpretação física):
+
+##### Existência de lançamentos muito diferentes
+
+Exemplo:
+
+alguns valores altos (2.8, 2.5)
+outros bem baixos (1.5, 1.6)
+
+O que gera caudas pesadas
+
+#### Concentração em torno de um valor médio
+
+maioria dos lançamentos:
+
+perto de ~1.9
+
+Isso cria o pico alto
+
+#### Falta de controle experimental :
+
+variação de força
+variação de ângulo
+erro humano
+posição da trena
+
+##### Pequenas variações → grandes desvios
+
+## Conclusão 
+Por meio desse experimento, foi possível entender, de forma visual como minúcias causam pequenas variações, e erros humanos são muito influenciaveis na medida que pensamos manter a mesma precisão,mesma força, no caso de Emily, quando não percebemos que a mesa tinha deslocado, etc, isso causa grande efeito nos dados.E, além disso, foi imprensidivel fazer análises estatísticas, como media,mediana e moda, e analisa -las no conjunto de dados. De forma análoga, analisando os dados, quanto a precisão, chega-se a conclusão de que : 
+
+## A mediana tende a ser a medida mais precisa para representar as distâncias
+
+Pois existe valores extremos, logo curtose alta (≈ 5,29). 
+Isso indica outliers (Outliers são valores que estão muito distantes do padrão do conjunto de dados.)
+
+### Media:
+✔Vantagem:
+usa todos os dados
+Problema:
+sensível a valores extremos
+
+👉alguns lançamentos muito altos/baixos puxam a média
+
+### Mediana (mais robusta)
+
+Valor central dos dados ordenados
+
+✔Vantagens:
+não é afetada por outliers
+representa melhor o “comportamento típico”
+
+👉Ideal para o xperimento
+
+### Moda
+
+👉valor mais frequente
+
+Problema:
+seus dados são contínuos
+dificilmente há repetições exatas
+
+Pouco útil aqui
+
+
