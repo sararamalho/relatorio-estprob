@@ -28,8 +28,16 @@ execute:
 
 ## 📌 Introdução
 
-Baseado nas 8 aulas do professor Ben Dêivide,será apresentado linguagem R e o Rstudio .
-> 
+Baseado nas 8 aulas do professor Ben Dêivide:
+Aula 00 : https://bendeivide.github.io/slides/rbasico2024/slide00/index.html
+Aula 01 : https://bendeivide.github.io/slides/rbasico2024/slide01/index.html
+Aula 03 : https://bendeivide.github.io/slides/rbasico2024/slide03/index.html
+Aula 04 : https://bendeivide.github.io/slides/rbasico2024/slide04/index.html
+Aula 05 : https://bendeivide.github.io/slides/rbasico2024/slide05/index.html
+Aula 06 : https://bendeivide.github.io/slides/rbasico2024/slide06/index.html
+Aula 07 : https://bendeivide.github.io/slides/rbasico2024/slide07/index.html
+
+Será feito uma apresentação do que é a linguagem R.
 
 ## 🎯 Objetivos
 
@@ -43,9 +51,7 @@ Fixar os fundamentos da linguagem R
 
 - Compreender a lógica de funcionamento do ambiente R e sua estrutura interna;
 - Identificar e aplicar comandos básicos no Ambiente Global;
-- Desenvolver habilidades na criação, organização e salvamento de scripts;
-- Promover o uso organizado, eficiente e reprodutível da linguagem.
-
+-  Mostrar como se cria e organiza os scripts
 ---
 
 ## 📚  Fundamentação Teórica

@@ -129,62 +129,24 @@ kable(
 )
 ```
 
-## 📚 Cálculos
-
-## A seguir, os cálculos da frequência de cada valor
-
-```{r}
-library(knitr)
-
-# calcular frequência de cada valor
-freq <- table(distancia)
-
-# associar frequência a cada observação
-freq_individual <- freq[as.character(distancia)]
-
-# Gerando tabela horizontal
-kable(
-  tabela,
-  col.names = paste0("N", lancamento)
-)
-
-# calcular frequência de cada valor
-freq <- table(distancia)
-
-# associar frequência a cada observação
-freq_individual <- freq[as.character(distancia)]
-
-# montar tabela horizontal
-tabela_x <- rbind(
-  Distancia = as.numeric(names(freq)),
-  Frequencia = as.numeric(freq)
-)
-
-```
-
-
-```{r}
-library(knitr)
-
-moda <- function(x) {
-  ux <- unique(x)
-  ux[which.max(tabulate(match(x, ux)))]
-}
-moda(distancia)
-
-```
-
-## A seguir , uma análise estatística das distâncias, a começar por :
+## 📚 A seguir , uma análise estatística das distâncias, a começar por :
 
 ### 1. Mediana
 
 $$
 Md = \frac{x_{\frac{n}{2}} + x_{\frac{n}{2}+1}}{2}
 $$
-Resultado:
+### Resultado:
+
+#### Das distâncias :
 
 ```{r}
 cat("Mediana =", median(distancia))
+```
+
+#### Das frequencias de cada distância :
+```{r}
+cat("Mediana =", median(freq))
 ```
 
 ### 2.Desvio padrão
@@ -192,7 +154,16 @@ cat("Mediana =", median(distancia))
 $$
 s <- sqrt( sum((distancia - media)^2) / (n - 1) )
 $$
-Resultado :
+
+### Resultado :
+
+#### das distâncias :
+
+```{r}
+round(sd(distancia), 4)
+```
+
+### Das frequencias de cada distância :
 
 ```{r}
 round(sd(distancia), 4)
@@ -203,8 +174,9 @@ round(sd(distancia), 4)
 $$
 Mo = \text{valor mais frequente}
 $$
+### Resultado:
 
-Resultado:
+#### das distâncias :
 
 ```{r}
 moda <- function(x){
@@ -213,6 +185,16 @@ moda <- function(x){
 }
 cat("Moda =", moda(distancia))
 ```
+
+### Das frequencias de cada distância :
+```{r}
+moda <- function(x){
+  ux <- unique(x)
+  ux[which.max(tabulate(match(x, ux)))]
+}
+cat("Moda =", moda(freq))
+```
+
 
 ## 🧠 Considerações finais
 
