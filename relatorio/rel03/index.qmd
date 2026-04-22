@@ -107,7 +107,8 @@ kable(tabela_original, caption = "Distâncias originais")
 $$
 Dist_{total} = Dist_{pé} + 2.35
 $$
-### Os resultados foram organizados em função da ordem dos lançamentos.
+####  Os resultados foram organizados em função da ordem dos lançamentos.
+
 ```{r}
 library(knitr)
 
@@ -121,7 +122,8 @@ tabela <- rbind(
 )
 ```
 
-## A seguir, os cálculos da frequência de cada valor
+## A seguir, uma comparação com a ditância percorrida pela bola a partir do pé da cadeira (dist_pé) e essa distância adicionado a antes do pé da cadeira - a distância total (dist_total) :
+
 ```{r}
 # calcular frequência de cada valor
 freq <- table(distancia_nova)
@@ -134,7 +136,11 @@ kable(
   tabela,
   col.names = paste("N", N)
 )
+```
 
+## Agora, as frequências correspondentes a cada distância : 
+
+```{r}
 # calcular frequência de cada valor
 freq <- table(distancia_nova)
 
@@ -151,7 +157,27 @@ kable(tabela_x, caption = "Tabela horizontal lançamentos, e frequências")
       
 ```
 
-## Calculando 
+## A seguir , uma analise estatística dos dados das distâncias e frequências :
+
+### Média
+
+$$
+\bar{x} = \frac{\sum x_i}{n}
+$$
+
+#### Das distâncias :
+
+```{r}
+media <- sum(as.numeric(names(distancia_nova)) * freq) / sum(freq)
+media
+```
+
+#### Das frequências :
+
+```{r}
+media <- sum(as.numeric(names(freq)) * freq) / sum(freq)
+media
+```
 
 ### Mediana
 
@@ -159,10 +185,18 @@ $$
 Md = \frac{x_{\frac{n}{2}} + x_{\frac{n}{2}+1}}{2}
 $$
 
-Resultado:
+### Resultado:
+
+#### Das distâncias :
 
 ```{r}
 cat("Mediana =", median(distancia_nova))
+```
+
+#### Das frequências :
+
+```{r}
+cat("Mediana =", median(freq))
 ```
 
 ### Desvio padrão
@@ -173,8 +207,15 @@ $$
 
 Resultado:
 
+#### Das distâncias :
+
 ```{r}
 cat("Desvio padrão =", sd(distancia_nova))
+```
+
+#### Das frequências :
+```{r}
+cat("Desvio padrão =", sd(freq))
 ```
 
 ###  Moda
@@ -183,7 +224,10 @@ $$
 Mo = \text{valor mais frequente}
 $$
 
-Resultado:
+### Resultado:
+
+#### Das distâncias :
+
 ```{r}
 moda <- function(x){
   ux <- unique(x)
@@ -192,7 +236,18 @@ moda <- function(x){
 cat("Moda =", moda(distancia_nova))
 ```
 
-As mudanças nos valores apresentados se deram por fatores como 
+#### Das frequências :
+
+```{r}
+moda <- function(x){
+  ux <- unique(x)
+  ux[which.max(tabulate(match(x, ux)))]
+}
+cat("Moda =", moda(freq))
+```
+
+
+##### Mudanças nos valores apresentados se deram por fatores como 
 
 ## Força Elástica
 

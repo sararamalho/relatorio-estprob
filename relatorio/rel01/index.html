@@ -123,19 +123,33 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#análise-de-dados" id="toc-análise-de-dados" class="nav-link" data-scroll-target="#análise-de-dados"><span class="header-section-number">4.1</span> 📊 Análise de Dados</a></li>
   </ul></li>
-  <li><a href="#fundamentação-teórica" id="toc-fundamentação-teórica" class="nav-link" data-scroll-target="#fundamentação-teórica"><span class="header-section-number">5</span> 📚 Fundamentação Teórica</a></li>
-  <li><a href="#considerações-finais" id="toc-considerações-finais" class="nav-link" data-scroll-target="#considerações-finais"><span class="header-section-number">6</span> 🧠 Considerações finais</a></li>
+  <li><a href="#cálculos" id="toc-cálculos" class="nav-link" data-scroll-target="#cálculos"><span class="header-section-number">5</span> 📚 Cálculos</a></li>
+  <li><a href="#a-seguir-os-cálculos-da-frequência-de-cada-valor" id="toc-a-seguir-os-cálculos-da-frequência-de-cada-valor" class="nav-link" data-scroll-target="#a-seguir-os-cálculos-da-frequência-de-cada-valor"><span class="header-section-number">6</span> A seguir, os cálculos da frequência de cada valor</a></li>
+  <li><a href="#a-seguir-uma-análise-estatística-das-distâncias-a-começar-por" id="toc-a-seguir-uma-análise-estatística-das-distâncias-a-começar-por" class="nav-link" data-scroll-target="#a-seguir-uma-análise-estatística-das-distâncias-a-começar-por"><span class="header-section-number">7</span> A seguir , uma análise estatística das distâncias, a começar por :</a>
+  <ul class="collapse">
+  <li><a href="#mediana" id="toc-mediana" class="nav-link" data-scroll-target="#mediana"><span class="header-section-number">7.1</span> 1. Mediana</a></li>
+  <li><a href="#desvio-padrão" id="toc-desvio-padrão" class="nav-link" data-scroll-target="#desvio-padrão"><span class="header-section-number">7.2</span> 2.Desvio padrão</a></li>
+  </ul></li>
+  <li><a href="#moda" id="toc-moda" class="nav-link" data-scroll-target="#moda"><span class="header-section-number">8</span> 3.Moda</a></li>
+  <li><a href="#considerações-finais" id="toc-considerações-finais" class="nav-link" data-scroll-target="#considerações-finais"><span class="header-section-number">9</span> 🧠 Considerações finais</a></li>
   </ul>
 </nav>
 </div>
 <main class="content" id="quarto-document-content">
 <div class="logos" style="display: flex; justify-content: center; align-items: center; height: 200px; gap: 20px;">
+
   <a href="https://ufsj.edu.br">
+
     <img src="imagens/ufsj.png" width="220px">
+
   </a>
+
   <a href="https://ufsj.edu.br/defim">
+
     <img src="imagens/defim.png" width="220px">
+
   </a>
+
 </div>
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -158,7 +172,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Data de Publicação</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">31/03/2026, 16:42</p>
+      <p class="date">31/03/2026, 11:57</p>
     </div>
   </div>
   
@@ -172,16 +186,12 @@ window.Quarto = {
 
 <section id="introdução" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="introdução"><span class="header-section-number">1</span> 📌 Introdução</h2>
-<p>Com ajuda do professor e mais outros 5 colegas realizamos com um experimento que consistia em lançar uma bola de ping pong a partir de uma catapulta e com isso medir a distância atingida pela por essa bola procurando analisar a variação de distância percorrida pela mesma.</p>
-<p>A partir de lançamentos repetidos, buscou-se avaliar a influência desses fatores nos resultados, permitindo analisar uma mudança no comprimento percorrido pela bola em questão além da comparação entre os diferentes grupos de valores. Mesmo sob condições controladas, observou-se a presença de aleatoriedade, evidenciando a importância da análise estatística para interpretar os dados experimentais.</p>
+<p>Este relatório apresenta a análise estatística de um experimento realizado em sala de aula, no qual uma bola foi lançada 41 vezes por meio de uma catapulta, com o objetivo de observar a variabilidade dos resultados. A partir das distâncias obtidas, busca-se evidenciar que não existem valores constantes em fenômenos reais, uma vez que diferentes fatores — como força aplicada, ângulo de lançamento e condições do ambiente — influenciam diretamente os resultados.</p>
+<p>Os dados coletados foram organizados e analisados utilizando ferramentas da Estatística Descritiva, permitindo identificar medidas de posição, dispersão e características da distribuição, como assimetria e curtose. Dessa forma, o experimento demonstra, na prática, como pequenas variações nas condições iniciais podem gerar diferenças significativas nos resultados, reforçando a importância da análise estatística na interpretação de dados experimentais.</p>
 </section>
 <section id="objetivos" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="objetivos"><span class="header-section-number">2</span> 🎯 Objetivos</h2>
-<p>Coletar e organizar dados experimentais provenientes de lançamentos repetidos;</p>
-<p>Comparar os resultados entre os diferentes grupos, identificando variações no desempenho;</p>
-<p>Avaliar a influência de cada configuração da catapulta sobre a distância alcançada;</p>
-<p>Compreender o papel da aleatoriedade e das incertezas nos resultados experimentais.</p>
-<p>Dessa forma, o experimento visa desenvolver a capacidade de análise crítica de dados</p>
+<p>Analisar estatisticamente os dados obtidos a partir dos lançamentos da bola, evidenciando a variabilidade dos resultados e a influência de diferentes fatores experimentais.</p>
 <section id="objetivo-geral" class="level3" data-number="2.1">
 <h3 data-number="2.1" class="anchored" data-anchor-id="objetivo-geral"><span class="header-section-number">2.1</span> Objetivo geral</h3>
 <p>Lançar a bola por meio da catapulta sob as mesmas condições 40 vezes e estudar a mudança das distâncias.</p>
@@ -191,6 +201,11 @@ window.Quarto = {
 <ul>
 <li><p>Coletar dados experimentais</p></li>
 <li><p>Interpretar resultados</p></li>
+<li><p>Identificar a presença de valores extremos (outliers) e analisar seu impacto;</p></li>
+<li><p>Calcular e interpretar a assimetria e a curtose da distribuição;</p></li>
+<li><p>Investigar a influência de fatores experimentais (força, ângulo, medição) nos resultados</p></li>
+<li><p>Utilizar a linguagem R para análise e organização dos dados;</p></li>
+<li><p>Interpretar os resultados obtidos, relacionando-os com as condições do experimento</p></li>
 </ul>
 <hr>
 </section>
@@ -198,8 +213,8 @@ window.Quarto = {
 <section id="metodologia" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="metodologia"><span class="header-section-number">3</span> ⚙️ Metodologia</h2>
 <p>Apoiou- se a catapulta em uma mesa de madeira,plana.Uma pessoa A ficou sendo responsável por lançar a bolinha com a catapulta( configurações dessa ) :</p>
-<p>B+:100° A+: nível 2 O-: nível 3 A-: nível 2</p>
-<p>Colocou - se pó de giz na bola antes de coloca - la na cataputa.Outra B ficou encarregada de ficar olhando com ajuda de uma trena métrica que começava no rumo dos pés da mesa - essa lia em voz alta em que metragem a bola caiu e ou tro,C ficava segurando a trena embaixo da mesa.Um D anotava a distância que o B dizia e o número do lançamento.Mas depois do lançamento 16 houve uma pessoa F falando o que D anotava para o professor G fazer uma planilha Excell já adi antada (basicamente o que o D fez só que nessa ferramenta ).</p>
+<p>B+: 100° A+: nível 2 O-: nível 3 A-: nível 2</p>
+<p>Colocou - se pó de giz na bola antes de coloca - la na cataputa. Outra B ficou encarregada de ficar olhando com ajuda de uma trena métrica que começava no rumo dos pés da mesa - essa lia em voz alta em que metragem a bola caiu e outro,C ficava segurando a trena embaixo da mesa.Um D anotava a distância que oB dizia e o número do lançamento.Mas depois do lançamento 16 houve uma pessoaF falando o que D anotava para o professor G fazer uma planilha Excell já adiantada (basicamente o que o D fez só que nessa ferramenta ).</p>
 <hr>
 </section>
 <section id="resultados-e-discussão" class="level2" data-number="4">
@@ -213,122 +228,548 @@ window.Quarto = {
 </ol>
 <section id="análise-de-dados" class="level3" data-number="4.1">
 <h3 data-number="4.1" class="anchored" data-anchor-id="análise-de-dados"><span class="header-section-number">4.1</span> 📊 Análise de Dados</h3>
-<p>O lançamento foram a quatidade de vezes que a bolda foi lançada e a distância foi a distância alcançada pela mesma :</p>
+<p>A seguir , uma tabela mostrando a distância (m) correspondente a cada lançamento N :</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Código</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>lancamento <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">10</span>,<span class="dv">11</span>,<span class="dv">12</span>,<span class="dv">13</span>,<span class="dv">14</span>,<span class="dv">15</span>,<span class="dv">16</span>,<span class="dv">17</span>,<span class="dv">18</span>,<span class="dv">19</span>,<span class="dv">20</span>,<span class="dv">21</span>,<span class="dv">22</span>,<span class="dv">23</span>,<span class="dv">24</span>,</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                <span class="dv">25</span>,<span class="dv">26</span>,<span class="dv">27</span>,<span class="dv">28</span>,<span class="dv">29</span>,<span class="dv">30</span>,<span class="dv">31</span>,<span class="dv">32</span>,<span class="dv">33</span>,<span class="dv">34</span>,<span class="dv">35</span>,<span class="dv">36</span>,<span class="dv">37</span>,<span class="dv">38</span>,<span class="dv">39</span>,<span class="dv">40</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>distancia  <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">1.96</span>,<span class="fl">1.95</span>,<span class="fl">1.99</span>,<span class="fl">1.93</span>,<span class="fl">2.05</span>,<span class="fl">2.13</span>,<span class="fl">2.8</span>,<span class="fl">1.99</span>,<span class="fl">2.5</span>,<span class="fl">2.8</span>,<span class="fl">1.99</span>,<span class="fl">1.88</span>,<span class="fl">2.01</span>,</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>                <span class="fl">1.97</span>,<span class="fl">2.0</span>,<span class="fl">1.72</span>,<span class="fl">1.86</span>,<span class="fl">1.95</span>,<span class="fl">1.92</span>,<span class="fl">2.03</span>,<span class="fl">1.71</span>,<span class="fl">1.64</span>,<span class="fl">1.87</span>,<span class="fl">1.96</span>,<span class="fl">1.93</span>,<span class="fl">1.77</span>,</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>                <span class="fl">1.95</span>,<span class="fl">1.93</span>,<span class="fl">1.98</span>,<span class="fl">1.96</span>,<span class="fl">1.98</span>,<span class="fl">1.68</span>,<span class="fl">1.82</span>,<span class="fl">1.84</span>,<span class="fl">1.9</span>,<span class="fl">1.87</span>,<span class="fl">1.67</span>,<span class="fl">1.51</span>,<span class="fl">1.68</span>,<span class="fl">1.72</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(lancamento, distancia)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>dados</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>lancamento <span class="ot">&lt;-</span> <span class="fu">c</span>( <span class="dv">1</span> , <span class="dv">2</span> , <span class="dv">3</span> , <span class="dv">4</span> , <span class="dv">5</span> , <span class="dv">6</span> , <span class="dv">7</span> , <span class="dv">8</span> , <span class="dv">9</span> , <span class="dv">10</span> , <span class="dv">11</span> , <span class="dv">12</span> , <span class="dv">13</span> , <span class="dv">14</span> , <span class="dv">15</span> , <span class="dv">16</span> , <span class="dv">17</span> , <span class="dv">18</span> , <span class="dv">19</span> , <span class="dv">20</span> , <span class="dv">21</span> , <span class="dv">22</span> , <span class="dv">23</span> , <span class="dv">24</span> , <span class="dv">25</span> , <span class="dv">26</span> , <span class="dv">27</span>, <span class="dv">28</span> , <span class="dv">29</span> , <span class="dv">30</span> , <span class="dv">31</span> ,<span class="dv">32</span> ,<span class="dv">33</span> , <span class="dv">34</span> , <span class="dv">35</span> , <span class="dv">36</span> , <span class="dv">37</span> , <span class="dv">38</span> , <span class="dv">39</span> , <span class="dv">40</span> )</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>distancia  <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">1.96</span>,<span class="fl">1.95</span>,<span class="fl">1.99</span>,<span class="fl">1.93</span>,<span class="fl">2.05</span>,<span class="fl">2.13</span>,<span class="fl">2.8</span>,<span class="fl">1.99</span>,<span class="fl">2.5</span>,<span class="fl">2.8</span>,<span class="fl">1.99</span>,<span class="fl">1.88</span>,<span class="fl">2.01</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>                <span class="fl">1.97</span>,<span class="fl">2.0</span>,<span class="fl">1.72</span>,<span class="fl">1.86</span>,<span class="fl">1.95</span>,<span class="fl">1.92</span>,<span class="fl">2.03</span>,<span class="fl">1.71</span>,<span class="fl">1.64</span>,<span class="fl">1.87</span>,<span class="fl">1.96</span>,<span class="fl">1.93</span>,<span class="fl">1.77</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>                <span class="fl">1.95</span>,<span class="fl">1.93</span>,<span class="fl">1.98</span>,<span class="fl">1.96</span>,<span class="fl">1.98</span>,<span class="fl">1.68</span>,<span class="fl">1.82</span>,<span class="fl">1.84</span>,<span class="fl">1.9</span>,<span class="fl">1.87</span>,<span class="fl">1.67</span>,<span class="fl">1.51</span>,<span class="fl">1.68</span>,<span class="fl">1.72</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Frequência</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>freq <span class="ot">&lt;-</span> <span class="fu">table</span>(distancia)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Tabela horizontal dos dados</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>tabela <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Distância (m)"</span> <span class="ot">=</span> distancia</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  tabela,</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">paste0</span>(<span class="st">"N"</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">40</span> ),</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Tabela 1: Dados dos lançamentos (horizontal)"</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-<div class="cell-output cell-output-stdout">
-<pre><code>   lancamento distancia
-1           1      1.96
-2           2      1.95
-3           3      1.99
-4           4      1.93
-5           5      2.05
-6           6      2.13
-7           7      2.80
-8           8      1.99
-9           9      2.50
-10         10      2.80
-11         11      1.99
-12         12      1.88
-13         13      2.01
-14         14      1.97
-15         15      2.00
-16         16      1.72
-17         17      1.86
-18         18      1.95
-19         19      1.92
-20         20      2.03
-21         21      1.71
-22         22      1.64
-23         23      1.87
-24         24      1.96
-25         25      1.93
-26         26      1.77
-27         27      1.95
-28         28      1.93
-29         29      1.98
-30         30      1.96
-31         31      1.98
-32         32      1.68
-33         33      1.82
-34         34      1.84
-35         35      1.90
-36         36      1.87
-37         37      1.67
-38         38      1.51
-39         39      1.68
-40         40      1.72</code></pre>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Tabela 1: Dados dos lançamentos (horizontal)</caption>
+<colgroup>
+<col style="width: 6%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 1%">
+<col style="width: 2%">
+<col style="width: 1%">
+<col style="width: 1%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 1%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 1%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">N1</th>
+<th style="text-align: right;">N2</th>
+<th style="text-align: right;">N3</th>
+<th style="text-align: right;">N4</th>
+<th style="text-align: right;">N5</th>
+<th style="text-align: right;">N6</th>
+<th style="text-align: right;">N7</th>
+<th style="text-align: right;">N8</th>
+<th style="text-align: right;">N9</th>
+<th style="text-align: right;">N10</th>
+<th style="text-align: right;">N11</th>
+<th style="text-align: right;">N12</th>
+<th style="text-align: right;">N13</th>
+<th style="text-align: right;">N14</th>
+<th style="text-align: right;">N15</th>
+<th style="text-align: right;">N16</th>
+<th style="text-align: right;">N17</th>
+<th style="text-align: right;">N18</th>
+<th style="text-align: right;">N19</th>
+<th style="text-align: right;">N20</th>
+<th style="text-align: right;">N21</th>
+<th style="text-align: right;">N22</th>
+<th style="text-align: right;">N23</th>
+<th style="text-align: right;">N24</th>
+<th style="text-align: right;">N25</th>
+<th style="text-align: right;">N26</th>
+<th style="text-align: right;">N27</th>
+<th style="text-align: right;">N28</th>
+<th style="text-align: right;">N29</th>
+<th style="text-align: right;">N30</th>
+<th style="text-align: right;">N31</th>
+<th style="text-align: right;">N32</th>
+<th style="text-align: right;">N33</th>
+<th style="text-align: right;">N34</th>
+<th style="text-align: right;">N35</th>
+<th style="text-align: right;">N36</th>
+<th style="text-align: right;">N37</th>
+<th style="text-align: right;">N38</th>
+<th style="text-align: right;">N39</th>
+<th style="text-align: right;">N40</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Distância (m)</td>
+<td style="text-align: right;">1.96</td>
+<td style="text-align: right;">1.95</td>
+<td style="text-align: right;">1.99</td>
+<td style="text-align: right;">1.93</td>
+<td style="text-align: right;">2.05</td>
+<td style="text-align: right;">2.13</td>
+<td style="text-align: right;">2.8</td>
+<td style="text-align: right;">1.99</td>
+<td style="text-align: right;">2.5</td>
+<td style="text-align: right;">2.8</td>
+<td style="text-align: right;">1.99</td>
+<td style="text-align: right;">1.88</td>
+<td style="text-align: right;">2.01</td>
+<td style="text-align: right;">1.97</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1.72</td>
+<td style="text-align: right;">1.86</td>
+<td style="text-align: right;">1.95</td>
+<td style="text-align: right;">1.92</td>
+<td style="text-align: right;">2.03</td>
+<td style="text-align: right;">1.71</td>
+<td style="text-align: right;">1.64</td>
+<td style="text-align: right;">1.87</td>
+<td style="text-align: right;">1.96</td>
+<td style="text-align: right;">1.93</td>
+<td style="text-align: right;">1.77</td>
+<td style="text-align: right;">1.95</td>
+<td style="text-align: right;">1.93</td>
+<td style="text-align: right;">1.98</td>
+<td style="text-align: right;">1.96</td>
+<td style="text-align: right;">1.98</td>
+<td style="text-align: right;">1.68</td>
+<td style="text-align: right;">1.82</td>
+<td style="text-align: right;">1.84</td>
+<td style="text-align: right;">1.9</td>
+<td style="text-align: right;">1.87</td>
+<td style="text-align: right;">1.67</td>
+<td style="text-align: right;">1.51</td>
+<td style="text-align: right;">1.68</td>
+<td style="text-align: right;">1.72</td>
+</tr>
+</tbody>
+</table>
+</div>
+<details class="code-fold">
+<summary>Código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Tabela de frequência</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.data.frame</span>(freq),</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Distância (m)"</span>, <span class="st">"Frequência"</span>),</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Tabela 2: Frequência das distâncias"</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Tabela 2: Frequência das distâncias</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Distância (m)</th>
+<th style="text-align: right;">Frequência</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1.51</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1.64</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1.67</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1.68</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1.71</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1.72</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1.77</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1.82</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1.84</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1.86</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1.87</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1.88</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1.9</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1.92</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1.93</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1.95</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1.96</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1.97</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1.98</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1.99</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2.01</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2.03</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2.05</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2.13</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2.5</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2.8</td>
+<td style="text-align: right;">2</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </section>
 </section>
-<section id="fundamentação-teórica" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="fundamentação-teórica"><span class="header-section-number">5</span> 📚 Fundamentação Teórica</h2>
-<p>Apresente os conceitos principais:</p>
-<ol type="1">
-<li><p>Quantidade de amostras</p></li>
-<li><p>Média</p></li>
-<li><p>Mediana</p></li>
-<li><p>Moda</p></li>
-<li><p>Tamanho da amostra (n)</p></li>
-</ol>
-<p>n = 40</p>
-<ol start="2" type="1">
-<li><p>mean(distancia) or sum(distancia) / length(distancia)</p></li>
-<li><p>median(distancia) or sort(distancia)</p></li>
-</ol>
+<section id="cálculos" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="cálculos"><span class="header-section-number">5</span> 📚 Cálculos</h2>
+</section>
+<section id="a-seguir-os-cálculos-da-frequência-de-cada-valor" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="a-seguir-os-cálculos-da-frequência-de-cada-valor"><span class="header-section-number">6</span> A seguir, os cálculos da frequência de cada valor</h2>
 <div class="cell">
 <details class="code-fold">
 <summary>Código</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>moda <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  ux <span class="ot">&lt;-</span> <span class="fu">unique</span>(x)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  ux[<span class="fu">which.max</span>(<span class="fu">tabulate</span>(<span class="fu">match</span>(x, ux)))]</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">moda</span>(distancia)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># calcular frequência de cada valor</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>freq <span class="ot">&lt;-</span> <span class="fu">table</span>(distancia)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># associar frequência a cada observação</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>freq_individual <span class="ot">&lt;-</span> freq[<span class="fu">as.character</span>(distancia)]</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Gerando tabela horizontal</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  tabela,</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">paste0</span>(<span class="st">"N"</span>, lancamento)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 1%">
+<col style="width: 2%">
+<col style="width: 1%">
+<col style="width: 1%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 1%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 1%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">N1</th>
+<th style="text-align: right;">N2</th>
+<th style="text-align: right;">N3</th>
+<th style="text-align: right;">N4</th>
+<th style="text-align: right;">N5</th>
+<th style="text-align: right;">N6</th>
+<th style="text-align: right;">N7</th>
+<th style="text-align: right;">N8</th>
+<th style="text-align: right;">N9</th>
+<th style="text-align: right;">N10</th>
+<th style="text-align: right;">N11</th>
+<th style="text-align: right;">N12</th>
+<th style="text-align: right;">N13</th>
+<th style="text-align: right;">N14</th>
+<th style="text-align: right;">N15</th>
+<th style="text-align: right;">N16</th>
+<th style="text-align: right;">N17</th>
+<th style="text-align: right;">N18</th>
+<th style="text-align: right;">N19</th>
+<th style="text-align: right;">N20</th>
+<th style="text-align: right;">N21</th>
+<th style="text-align: right;">N22</th>
+<th style="text-align: right;">N23</th>
+<th style="text-align: right;">N24</th>
+<th style="text-align: right;">N25</th>
+<th style="text-align: right;">N26</th>
+<th style="text-align: right;">N27</th>
+<th style="text-align: right;">N28</th>
+<th style="text-align: right;">N29</th>
+<th style="text-align: right;">N30</th>
+<th style="text-align: right;">N31</th>
+<th style="text-align: right;">N32</th>
+<th style="text-align: right;">N33</th>
+<th style="text-align: right;">N34</th>
+<th style="text-align: right;">N35</th>
+<th style="text-align: right;">N36</th>
+<th style="text-align: right;">N37</th>
+<th style="text-align: right;">N38</th>
+<th style="text-align: right;">N39</th>
+<th style="text-align: right;">N40</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Distância (m)</td>
+<td style="text-align: right;">1.96</td>
+<td style="text-align: right;">1.95</td>
+<td style="text-align: right;">1.99</td>
+<td style="text-align: right;">1.93</td>
+<td style="text-align: right;">2.05</td>
+<td style="text-align: right;">2.13</td>
+<td style="text-align: right;">2.8</td>
+<td style="text-align: right;">1.99</td>
+<td style="text-align: right;">2.5</td>
+<td style="text-align: right;">2.8</td>
+<td style="text-align: right;">1.99</td>
+<td style="text-align: right;">1.88</td>
+<td style="text-align: right;">2.01</td>
+<td style="text-align: right;">1.97</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1.72</td>
+<td style="text-align: right;">1.86</td>
+<td style="text-align: right;">1.95</td>
+<td style="text-align: right;">1.92</td>
+<td style="text-align: right;">2.03</td>
+<td style="text-align: right;">1.71</td>
+<td style="text-align: right;">1.64</td>
+<td style="text-align: right;">1.87</td>
+<td style="text-align: right;">1.96</td>
+<td style="text-align: right;">1.93</td>
+<td style="text-align: right;">1.77</td>
+<td style="text-align: right;">1.95</td>
+<td style="text-align: right;">1.93</td>
+<td style="text-align: right;">1.98</td>
+<td style="text-align: right;">1.96</td>
+<td style="text-align: right;">1.98</td>
+<td style="text-align: right;">1.68</td>
+<td style="text-align: right;">1.82</td>
+<td style="text-align: right;">1.84</td>
+<td style="text-align: right;">1.9</td>
+<td style="text-align: right;">1.87</td>
+<td style="text-align: right;">1.67</td>
+<td style="text-align: right;">1.51</td>
+<td style="text-align: right;">1.68</td>
+<td style="text-align: right;">1.72</td>
+</tr>
+</tbody>
+</table>
+</div>
+<details class="code-fold">
+<summary>Código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># calcular frequência de cada valor</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>freq <span class="ot">&lt;-</span> <span class="fu">table</span>(distancia)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># associar frequência a cada observação</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>freq_individual <span class="ot">&lt;-</span> freq[<span class="fu">as.character</span>(distancia)]</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># montar tabela horizontal</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>tabela_x <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">Distancia =</span> <span class="fu">as.numeric</span>(<span class="fu">names</span>(freq)),</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">Frequencia =</span> <span class="fu">as.numeric</span>(freq)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>moda <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  ux <span class="ot">&lt;-</span> <span class="fu">unique</span>(x)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  ux[<span class="fu">which.max</span>(<span class="fu">tabulate</span>(<span class="fu">match</span>(x, ux)))]</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">moda</span>(distancia)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1.96</code></pre>
 </div>
 </div>
-<p>Exemplo se utilizasse o leem:</p>
+</section>
+<section id="a-seguir-uma-análise-estatística-das-distâncias-a-começar-por" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="a-seguir-uma-análise-estatística-das-distâncias-a-começar-por"><span class="header-section-number">7</span> A seguir , uma análise estatística das distâncias, a começar por :</h2>
+<section id="mediana" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="mediana"><span class="header-section-number">7.1</span> 1. Mediana</h3>
+<p><span class="math display">\[
+Md = \frac{x_{\frac{n}{2}} + x_{\frac{n}{2}+1}}{2}
+\]</span> Resultado:</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Código</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leem)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>distancia <span class="sc">|&gt;</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">new_leem</span>(<span class="at">variable =</span> <span class="dv">2</span>) <span class="sc">|&gt;</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tabfreq</span>() <span class="sc">|&gt;</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mpos</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Mediana ="</span>, <span class="fu">median</span>(distancia))</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>$average
-[1] 1.98
-
-$median
-[1] 1.96
-
-$mode
-[1] 1.97</code></pre>
+<pre><code>Mediana = 1.94</code></pre>
 </div>
 </div>
-<p>Considerando <span class="math inline">\(x_i\)</span> o í-esimo elemento de uma amostra de tamanho <span class="math inline">\(n\)</span>, a média aritmética é dada por:</p>
-<p><span class="math display">\[
-\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i
-\]</span></p>
 </section>
-<section id="considerações-finais" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="considerações-finais"><span class="header-section-number">6</span> 🧠 Considerações finais</h2>
+<section id="desvio-padrão" class="level3" data-number="7.2">
+<h3 data-number="7.2" class="anchored" data-anchor-id="desvio-padrão"><span class="header-section-number">7.2</span> 2.Desvio padrão</h3>
+<p><span class="math display">\[
+s &lt;- sqrt( sum((distancia - media)^2) / (n - 1) )
+\]</span> Resultado :</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">sd</span>(distancia), <span class="dv">4</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.2571</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="moda" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="moda"><span class="header-section-number">8</span> 3.Moda</h2>
+<p><span class="math display">\[
+Mo = \text{valor mais frequente}
+\]</span></p>
+<p>Resultado:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>moda <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  ux <span class="ot">&lt;-</span> <span class="fu">unique</span>(x)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  ux[<span class="fu">which.max</span>(<span class="fu">tabulate</span>(<span class="fu">match</span>(x, ux)))]</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Moda ="</span>, <span class="fu">moda</span>(distancia))</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Moda = 1.96</code></pre>
+</div>
+</div>
+</section>
+<section id="considerações-finais" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="considerações-finais"><span class="header-section-number">9</span> 🧠 Considerações finais</h2>
 <p>O experimento atingiu seu objetivo ao permitir a análise da influência de diferentes fatores na distância percorrida pela bolinha, evidenciando a variabilidade dos resultados por meio de ferramentas estatísticas.</p>
 <p>Observou-se, com isso,que o ângulo de lançamento, a força aplicada, o atrito (devido ao pó de giz) e erros de medição e comunicação impactaram diretamente os dados. Como aprendizado, destaca-se a importância do controle experimental e da análise estatística na interpretação de resultados reais.</p>
 <p>A qualidade dos dados foi suficiente, porém com dispersão elevada, indicando a presença de erros experimentais. Para melhorias, recomenda-se padronizar o lançamento, fixar corretamente a trena e reduzir interferências durante a coleta dos dados.</p>
@@ -789,171 +1230,229 @@ $mode
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Código fonte</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Só mude aqui!!!!</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Sarah Oliveira Ramalho"</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Relatório da catapulta"</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="an">bibliography:</span><span class="co"> referencias.bib</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># A partir daqui nao faca alteracoes!!!!!</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="an">link-citations:</span><span class="co"> true</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="an">csl:</span><span class="co"> associacao-brasileira-de-normas-tecnicas-ipea.csl</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "&lt;a href='https://bendeivide.github.io/courses/epaec/' target='_blank'&gt;Estatística e Probabilidade&lt;/a&gt; &lt;/br&gt; &lt;a href='https://bendeivide.github.io' target='_blank'&gt;Prof. Ben Dêivide (DEFIM/CAP/UFSJ)&lt;/a&gt;"</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="an">include-before-body:</span><span class="co"> header.html</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> now</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="an">date-format:</span><span class="co"> "31/03/2026, HH:mm"</span></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="an">lang:</span><span class="co"> pt-BR</span></span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="co">    number-sections: true</span></span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="co">    theme: bootstrap</span></span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="co">    #css: styles.css</span></span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="an">execute:</span></span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="co">  echo: true</span></span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="co">  warning: false</span></span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="co">  message: false</span></span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## 📌 Introdução</span></span>
-<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>Com ajuda do professor e mais outros 5 colegas realizamos com um experimento que consistia em lançar uma bola de ping pong a partir de uma catapulta e com isso medir a distância atingida pela por essa bola procurando analisar a variação de distância percorrida pela mesma.  </span>
-<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>A partir de lançamentos repetidos, buscou-se avaliar a influência desses fatores nos resultados, permitindo analisar uma mudança  no comprimento percorrido pela bola em questão além da comparação entre os diferentes grupos de valores. Mesmo sob condições controladas, observou-se a presença de aleatoriedade, evidenciando a importância da análise estatística para interpretar os dados experimentais.  </span>
-<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🎯 Objetivos</span></span>
-<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>Coletar e organizar dados experimentais provenientes de lançamentos repetidos;</span>
-<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>Comparar os resultados entre os diferentes grupos, identificando variações no desempenho;</span>
-<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>Avaliar a influência de cada configuração da catapulta sobre a distância alcançada;</span>
-<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>Compreender o papel da aleatoriedade e das incertezas nos resultados experimentais.</span>
-<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>Dessa forma, o experimento visa desenvolver a capacidade de análise crítica de dados</span>
-<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a><span class="fu">### Objetivo geral</span></span>
-<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a>Lançar a bola por meio da catapulta sob as mesmas condições 40 vezes e estudar a mudança das distâncias.</span>
-<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a><span class="fu">### Objetivos específicos</span></span>
-<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Coletar dados experimentais  </span>
-<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Interpretar resultados  </span>
-<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a><span class="fu">## ⚙️ Metodologia</span></span>
-<span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-62"><a href="#cb7-62" aria-hidden="true" tabindex="-1"></a>Apoiou- se a catapulta em uma mesa de madeira,plana.Uma pessoa A ficou sendo</span>
-<span id="cb7-63"><a href="#cb7-63" aria-hidden="true" tabindex="-1"></a>responsável por lançar a bolinha com a catapulta( configurações dessa ) :</span>
-<span id="cb7-64"><a href="#cb7-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-65"><a href="#cb7-65" aria-hidden="true" tabindex="-1"></a>B+:100°</span>
-<span id="cb7-66"><a href="#cb7-66" aria-hidden="true" tabindex="-1"></a>A+: nível 2</span>
-<span id="cb7-67"><a href="#cb7-67" aria-hidden="true" tabindex="-1"></a>O-: nível 3</span>
-<span id="cb7-68"><a href="#cb7-68" aria-hidden="true" tabindex="-1"></a>A-: nível 2</span>
-<span id="cb7-69"><a href="#cb7-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-70"><a href="#cb7-70" aria-hidden="true" tabindex="-1"></a>Colocou - se pó de giz na bola antes de coloca - la na cataputa.Outra B ficou</span>
-<span id="cb7-71"><a href="#cb7-71" aria-hidden="true" tabindex="-1"></a>encarregada de ficar olhando com ajuda de uma trena métrica que começava   no </span>
-<span id="cb7-72"><a href="#cb7-72" aria-hidden="true" tabindex="-1"></a>rumo dos pés da mesa - essa lia em voz alta em que metragem a bola caiu e  ou</span>
-<span id="cb7-73"><a href="#cb7-73" aria-hidden="true" tabindex="-1"></a>tro,C ficava segurando a trena embaixo da mesa.Um D anotava a distância que o</span>
-<span id="cb7-74"><a href="#cb7-74" aria-hidden="true" tabindex="-1"></a>B dizia e o número do lançamento.Mas depois do lançamento 16 houve uma pessoa</span>
-<span id="cb7-75"><a href="#cb7-75" aria-hidden="true" tabindex="-1"></a>F falando o que D anotava para o professor G fazer uma planilha Excell já adi</span>
-<span id="cb7-76"><a href="#cb7-76" aria-hidden="true" tabindex="-1"></a>antada (basicamente o que o D fez só que nessa ferramenta ).</span>
-<span id="cb7-77"><a href="#cb7-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-78"><a href="#cb7-78" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb7-79"><a href="#cb7-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-80"><a href="#cb7-80" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🔍 Resultados e Discussão</span></span>
-<span id="cb7-81"><a href="#cb7-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-82"><a href="#cb7-82" aria-hidden="true" tabindex="-1"></a>As causa de variações no resultado foram:</span>
-<span id="cb7-83"><a href="#cb7-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-84"><a href="#cb7-84" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Variação na inclinação da catapulta</span>
-<span id="cb7-85"><a href="#cb7-85" aria-hidden="true" tabindex="-1"></a>Fator B (ângulo de lançamento)</span>
-<span id="cb7-86"><a href="#cb7-86" aria-hidden="true" tabindex="-1"></a>𝐵+=100 (Esse é o ângulo do braço da catapulta) o alcance máximo é ≈ 45°</span>
-<span id="cb7-87"><a href="#cb7-87" aria-hidden="true" tabindex="-1"></a>e o máximo vertical é 100°.</span>
-<span id="cb7-88"><a href="#cb7-88" aria-hidden="true" tabindex="-1"></a>2.Variação na quantidade de pó de giz na bola </span>
-<span id="cb7-89"><a href="#cb7-89" aria-hidden="true" tabindex="-1"></a>isso provoca atrito na bola com a madeira da cataulta.</span>
-<span id="cb7-90"><a href="#cb7-90" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Pessoa F confundindo a D ao falar próximo ao ouvido da mesma</span>
-<span id="cb7-91"><a href="#cb7-91" aria-hidden="true" tabindex="-1"></a>isso aconteceu.Levou a pessoa D confundir valores.</span>
-<span id="cb7-92"><a href="#cb7-92" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Variação na força de lançamento </span>
-<span id="cb7-93"><a href="#cb7-93" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Mudança na localização da trena métrica</span>
-<span id="cb7-94"><a href="#cb7-94" aria-hidden="true" tabindex="-1"></a>quando a bola caía, ela balançava a fita, alterando a distância até a catapulta</span>
-<span id="cb7-95"><a href="#cb7-95" aria-hidden="true" tabindex="-1"></a>6.A trena não estava exatamente embaixo da onde a bola estava na catapulta</span>
-<span id="cb7-96"><a href="#cb7-96" aria-hidden="true" tabindex="-1"></a>muitas vezes a condição 5. alterava.</span>
-<span id="cb7-97"><a href="#cb7-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-98"><a href="#cb7-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-99"><a href="#cb7-99" aria-hidden="true" tabindex="-1"></a><span class="fu">### 📊  Análise de Dados</span></span>
-<span id="cb7-100"><a href="#cb7-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-101"><a href="#cb7-101" aria-hidden="true" tabindex="-1"></a>O lançamento foram a quatidade de vezes que a bolda foi lançada e a distância foi a distância alcançada pela mesma :</span>
-<span id="cb7-102"><a href="#cb7-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-103"><a href="#cb7-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-106"><a href="#cb7-106" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb7-107"><a href="#cb7-107" aria-hidden="true" tabindex="-1"></a>lancamento <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">10</span>,<span class="dv">11</span>,<span class="dv">12</span>,<span class="dv">13</span>,<span class="dv">14</span>,<span class="dv">15</span>,<span class="dv">16</span>,<span class="dv">17</span>,<span class="dv">18</span>,<span class="dv">19</span>,<span class="dv">20</span>,<span class="dv">21</span>,<span class="dv">22</span>,<span class="dv">23</span>,<span class="dv">24</span>,</span>
-<span id="cb7-108"><a href="#cb7-108" aria-hidden="true" tabindex="-1"></a>                <span class="dv">25</span>,<span class="dv">26</span>,<span class="dv">27</span>,<span class="dv">28</span>,<span class="dv">29</span>,<span class="dv">30</span>,<span class="dv">31</span>,<span class="dv">32</span>,<span class="dv">33</span>,<span class="dv">34</span>,<span class="dv">35</span>,<span class="dv">36</span>,<span class="dv">37</span>,<span class="dv">38</span>,<span class="dv">39</span>,<span class="dv">40</span>)</span>
-<span id="cb7-109"><a href="#cb7-109" aria-hidden="true" tabindex="-1"></a>distancia  <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">1.96</span>,<span class="fl">1.95</span>,<span class="fl">1.99</span>,<span class="fl">1.93</span>,<span class="fl">2.05</span>,<span class="fl">2.13</span>,<span class="fl">2.8</span>,<span class="fl">1.99</span>,<span class="fl">2.5</span>,<span class="fl">2.8</span>,<span class="fl">1.99</span>,<span class="fl">1.88</span>,<span class="fl">2.01</span>,</span>
-<span id="cb7-110"><a href="#cb7-110" aria-hidden="true" tabindex="-1"></a>                <span class="fl">1.97</span>,<span class="fl">2.0</span>,<span class="fl">1.72</span>,<span class="fl">1.86</span>,<span class="fl">1.95</span>,<span class="fl">1.92</span>,<span class="fl">2.03</span>,<span class="fl">1.71</span>,<span class="fl">1.64</span>,<span class="fl">1.87</span>,<span class="fl">1.96</span>,<span class="fl">1.93</span>,<span class="fl">1.77</span>,</span>
-<span id="cb7-111"><a href="#cb7-111" aria-hidden="true" tabindex="-1"></a>                <span class="fl">1.95</span>,<span class="fl">1.93</span>,<span class="fl">1.98</span>,<span class="fl">1.96</span>,<span class="fl">1.98</span>,<span class="fl">1.68</span>,<span class="fl">1.82</span>,<span class="fl">1.84</span>,<span class="fl">1.9</span>,<span class="fl">1.87</span>,<span class="fl">1.67</span>,<span class="fl">1.51</span>,<span class="fl">1.68</span>,<span class="fl">1.72</span>)</span>
-<span id="cb7-112"><a href="#cb7-112" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(lancamento, distancia)</span>
-<span id="cb7-113"><a href="#cb7-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-114"><a href="#cb7-114" aria-hidden="true" tabindex="-1"></a>dados</span>
-<span id="cb7-115"><a href="#cb7-115" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb7-116"><a href="#cb7-116" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-117"><a href="#cb7-117" aria-hidden="true" tabindex="-1"></a><span class="fu">## 📚  Fundamentação Teórica</span></span>
-<span id="cb7-118"><a href="#cb7-118" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-119"><a href="#cb7-119" aria-hidden="true" tabindex="-1"></a>Apresente os conceitos principais:</span>
-<span id="cb7-120"><a href="#cb7-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-121"><a href="#cb7-121" aria-hidden="true" tabindex="-1"></a>1) Quantidade de amostras</span>
-<span id="cb7-122"><a href="#cb7-122" aria-hidden="true" tabindex="-1"></a>2) Média</span>
-<span id="cb7-123"><a href="#cb7-123" aria-hidden="true" tabindex="-1"></a>4) Mediana</span>
-<span id="cb7-124"><a href="#cb7-124" aria-hidden="true" tabindex="-1"></a>5) Moda</span>
-<span id="cb7-125"><a href="#cb7-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-126"><a href="#cb7-126" aria-hidden="true" tabindex="-1"></a>1) Tamanho da amostra (n)</span>
-<span id="cb7-127"><a href="#cb7-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-128"><a href="#cb7-128" aria-hidden="true" tabindex="-1"></a>n = 40</span>
-<span id="cb7-129"><a href="#cb7-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-130"><a href="#cb7-130" aria-hidden="true" tabindex="-1"></a>2) mean(distancia) or sum(distancia) / length(distancia)</span>
-<span id="cb7-131"><a href="#cb7-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-132"><a href="#cb7-132" aria-hidden="true" tabindex="-1"></a>3) median(distancia) or sort(distancia)</span>
-<span id="cb7-133"><a href="#cb7-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-134"><a href="#cb7-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-137"><a href="#cb7-137" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb7-138"><a href="#cb7-138" aria-hidden="true" tabindex="-1"></a>moda <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb7-139"><a href="#cb7-139" aria-hidden="true" tabindex="-1"></a>  ux <span class="ot">&lt;-</span> <span class="fu">unique</span>(x)</span>
-<span id="cb7-140"><a href="#cb7-140" aria-hidden="true" tabindex="-1"></a>  ux[<span class="fu">which.max</span>(<span class="fu">tabulate</span>(<span class="fu">match</span>(x, ux)))]</span>
-<span id="cb7-141"><a href="#cb7-141" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb7-142"><a href="#cb7-142" aria-hidden="true" tabindex="-1"></a><span class="fu">moda</span>(distancia)</span>
-<span id="cb7-143"><a href="#cb7-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-144"><a href="#cb7-144" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb7-145"><a href="#cb7-145" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-146"><a href="#cb7-146" aria-hidden="true" tabindex="-1"></a>Exemplo se utilizasse o leem:</span>
-<span id="cb7-147"><a href="#cb7-147" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-150"><a href="#cb7-150" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb7-151"><a href="#cb7-151" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leem)</span>
-<span id="cb7-152"><a href="#cb7-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-153"><a href="#cb7-153" aria-hidden="true" tabindex="-1"></a>distancia <span class="sc">|&gt;</span></span>
-<span id="cb7-154"><a href="#cb7-154" aria-hidden="true" tabindex="-1"></a>  <span class="fu">new_leem</span>(<span class="at">variable =</span> <span class="dv">2</span>) <span class="sc">|&gt;</span></span>
-<span id="cb7-155"><a href="#cb7-155" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tabfreq</span>() <span class="sc">|&gt;</span></span>
-<span id="cb7-156"><a href="#cb7-156" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mpos</span>()</span>
-<span id="cb7-157"><a href="#cb7-157" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb7-158"><a href="#cb7-158" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-159"><a href="#cb7-159" aria-hidden="true" tabindex="-1"></a>Considerando $x_i$  o í-esimo elemento de uma amostra de tamanho $n$, a média aritmética é dada por:</span>
-<span id="cb7-160"><a href="#cb7-160" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-161"><a href="#cb7-161" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb7-162"><a href="#cb7-162" aria-hidden="true" tabindex="-1"></a>\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i</span>
-<span id="cb7-163"><a href="#cb7-163" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb7-164"><a href="#cb7-164" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-165"><a href="#cb7-165" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🧠 Considerações finais</span></span>
-<span id="cb7-166"><a href="#cb7-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-167"><a href="#cb7-167" aria-hidden="true" tabindex="-1"></a>O experimento atingiu seu objetivo ao permitir a análise da influência de diferentes fatores na distância percorrida pela bolinha, evidenciando a variabilidade dos resultados por meio de ferramentas estatísticas.</span>
-<span id="cb7-168"><a href="#cb7-168" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-169"><a href="#cb7-169" aria-hidden="true" tabindex="-1"></a>Observou-se, com isso,que o ângulo de lançamento, a força aplicada, o atrito (devido ao pó de giz) e erros de medição e comunicação impactaram diretamente os dados. Como aprendizado, destaca-se a importância do controle experimental e da análise estatística na interpretação de resultados reais.</span>
-<span id="cb7-170"><a href="#cb7-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-171"><a href="#cb7-171" aria-hidden="true" tabindex="-1"></a>A qualidade dos dados foi suficiente, porém com dispersão elevada, indicando a presença de erros experimentais. Para melhorias, recomenda-se padronizar o lançamento, fixar corretamente a trena e reduzir interferências durante a coleta dos dados.</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Só mude aqui!!!!</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Sarah Oliveira Ramalho"</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Relatório da catapulta"</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="an">bibliography:</span><span class="co"> referencias.bib</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co"># A partir daqui nao faca alteracoes!!!!!</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="an">link-citations:</span><span class="co"> true</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="an">csl:</span><span class="co"> associacao-brasileira-de-normas-tecnicas-ipea.csl</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "&lt;a href='https://bendeivide.github.io/courses/epaec/' target='_blank'&gt;Estatística e Probabilidade&lt;/a&gt; &lt;/br&gt; &lt;a href='https://bendeivide.github.io' target='_blank'&gt;Prof. Ben Dêivide (DEFIM/CAP/UFSJ)&lt;/a&gt;"</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="an">include-before-body:</span><span class="co"> header.html</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> now</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="an">date-format:</span><span class="co"> "31/03/2026, HH:mm"</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="an">lang:</span><span class="co"> pt-BR</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="co">    number-sections: true</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a><span class="co">    theme: bootstrap</span></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a><span class="co">    #css: styles.css</span></span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a><span class="an">execute:</span></span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a><span class="co">  echo: true</span></span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a><span class="co">  warning: false</span></span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a><span class="co">  message: false</span></span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## 📌 Introdução</span></span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>Este relatório apresenta a análise estatística de um experimento realizado em sala de aula, no qual uma bola foi lançada 41 vezes por meio de uma catapulta, com o objetivo de observar a variabilidade dos resultados. A partir das distâncias obtidas, busca-se evidenciar que não existem valores constantes em fenômenos reais, uma vez que diferentes fatores — como força aplicada, ângulo de lançamento e condições do ambiente — influenciam diretamente os resultados.</span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>Os dados coletados foram organizados e analisados utilizando ferramentas da Estatística Descritiva, permitindo identificar medidas de posição, dispersão e características da distribuição, como assimetria e curtose. Dessa forma, o experimento demonstra, na prática, como pequenas variações nas condições iniciais podem gerar diferenças significativas nos resultados, reforçando a importância da análise estatística na interpretação de dados experimentais.</span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🎯 Objetivos</span></span>
+<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a>Analisar estatisticamente os dados obtidos a partir dos lançamentos da bola, evidenciando a variabilidade dos resultados e a influência de diferentes fatores experimentais.</span>
+<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a><span class="fu">### Objetivo geral</span></span>
+<span id="cb13-41"><a href="#cb13-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-42"><a href="#cb13-42" aria-hidden="true" tabindex="-1"></a>Lançar a bola por meio da catapulta sob as mesmas condições 40 vezes e estudar a mudança das distâncias.</span>
+<span id="cb13-43"><a href="#cb13-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-44"><a href="#cb13-44" aria-hidden="true" tabindex="-1"></a><span class="fu">### Objetivos específicos</span></span>
+<span id="cb13-45"><a href="#cb13-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-46"><a href="#cb13-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Coletar dados experimentais  </span>
+<span id="cb13-47"><a href="#cb13-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-48"><a href="#cb13-48" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Interpretar resultados  </span>
+<span id="cb13-49"><a href="#cb13-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-50"><a href="#cb13-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Identificar a presença de valores extremos (outliers) e analisar seu impacto;</span>
+<span id="cb13-51"><a href="#cb13-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-52"><a href="#cb13-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Calcular e interpretar a assimetria e a curtose da distribuição;</span>
+<span id="cb13-53"><a href="#cb13-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-54"><a href="#cb13-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Investigar a influência de fatores experimentais (força, ângulo, medição) nos resultados</span>
+<span id="cb13-55"><a href="#cb13-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-56"><a href="#cb13-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Utilizar a linguagem R para análise e organização dos dados;</span>
+<span id="cb13-57"><a href="#cb13-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-58"><a href="#cb13-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Interpretar os resultados obtidos, relacionando-os com as condições do experimento</span>
+<span id="cb13-59"><a href="#cb13-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-60"><a href="#cb13-60" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb13-61"><a href="#cb13-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-62"><a href="#cb13-62" aria-hidden="true" tabindex="-1"></a><span class="fu">## ⚙️ Metodologia</span></span>
+<span id="cb13-63"><a href="#cb13-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-64"><a href="#cb13-64" aria-hidden="true" tabindex="-1"></a>Apoiou- se a catapulta em uma mesa de madeira,plana.Uma pessoa A ficou sendo</span>
+<span id="cb13-65"><a href="#cb13-65" aria-hidden="true" tabindex="-1"></a>responsável por lançar a bolinha com a catapulta( configurações dessa ) :</span>
+<span id="cb13-66"><a href="#cb13-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-67"><a href="#cb13-67" aria-hidden="true" tabindex="-1"></a>B+: 100°</span>
+<span id="cb13-68"><a href="#cb13-68" aria-hidden="true" tabindex="-1"></a>A+: nível 2</span>
+<span id="cb13-69"><a href="#cb13-69" aria-hidden="true" tabindex="-1"></a>O-: nível 3</span>
+<span id="cb13-70"><a href="#cb13-70" aria-hidden="true" tabindex="-1"></a>A-: nível 2</span>
+<span id="cb13-71"><a href="#cb13-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-72"><a href="#cb13-72" aria-hidden="true" tabindex="-1"></a>Colocou - se pó de giz na bola antes de coloca - la na cataputa.</span>
+<span id="cb13-73"><a href="#cb13-73" aria-hidden="true" tabindex="-1"></a>Outra B ficou encarregada de ficar olhando com ajuda de uma trena métrica que começava no</span>
+<span id="cb13-74"><a href="#cb13-74" aria-hidden="true" tabindex="-1"></a>rumo dos pés da mesa - essa lia em voz alta em que metragem a bola caiu e outro,C ficava segurando a trena embaixo da mesa.Um D anotava a distância que oB dizia e o número do lançamento.Mas depois do lançamento 16 houve uma pessoaF falando o que D anotava para o professor G fazer uma planilha Excell já adiantada (basicamente o que o D fez só que nessa ferramenta ).</span>
+<span id="cb13-75"><a href="#cb13-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-76"><a href="#cb13-76" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb13-77"><a href="#cb13-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-78"><a href="#cb13-78" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🔍 Resultados e Discussão</span></span>
+<span id="cb13-79"><a href="#cb13-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-80"><a href="#cb13-80" aria-hidden="true" tabindex="-1"></a>As causa de variações no resultado foram:</span>
+<span id="cb13-81"><a href="#cb13-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-82"><a href="#cb13-82" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Variação na inclinação da catapulta</span>
+<span id="cb13-83"><a href="#cb13-83" aria-hidden="true" tabindex="-1"></a>Fator B (ângulo de lançamento)</span>
+<span id="cb13-84"><a href="#cb13-84" aria-hidden="true" tabindex="-1"></a>𝐵+=100 (Esse é o ângulo do braço da catapulta) o alcance máximo é ≈ 45°</span>
+<span id="cb13-85"><a href="#cb13-85" aria-hidden="true" tabindex="-1"></a>e o máximo vertical é 100°.</span>
+<span id="cb13-86"><a href="#cb13-86" aria-hidden="true" tabindex="-1"></a>2.Variação na quantidade de pó de giz na bola </span>
+<span id="cb13-87"><a href="#cb13-87" aria-hidden="true" tabindex="-1"></a>isso provoca atrito na bola com a madeira da cataulta.</span>
+<span id="cb13-88"><a href="#cb13-88" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Pessoa F confundindo a D ao falar próximo ao ouvido da mesma</span>
+<span id="cb13-89"><a href="#cb13-89" aria-hidden="true" tabindex="-1"></a>isso aconteceu.Levou a pessoa D confundir valores.</span>
+<span id="cb13-90"><a href="#cb13-90" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Variação na força de lançamento </span>
+<span id="cb13-91"><a href="#cb13-91" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Mudança na localização da trena métrica</span>
+<span id="cb13-92"><a href="#cb13-92" aria-hidden="true" tabindex="-1"></a>quando a bola caía, ela balançava a fita, alterando a distância até a catapulta</span>
+<span id="cb13-93"><a href="#cb13-93" aria-hidden="true" tabindex="-1"></a>6.A trena não estava exatamente embaixo da onde a bola estava na catapulta</span>
+<span id="cb13-94"><a href="#cb13-94" aria-hidden="true" tabindex="-1"></a>muitas vezes a condição 5. alterava.</span>
+<span id="cb13-95"><a href="#cb13-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-96"><a href="#cb13-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-97"><a href="#cb13-97" aria-hidden="true" tabindex="-1"></a><span class="fu">### 📊  Análise de Dados</span></span>
+<span id="cb13-98"><a href="#cb13-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-99"><a href="#cb13-99" aria-hidden="true" tabindex="-1"></a>A seguir , uma tabela mostrando a distância (m) correspondente a cada lançamento N :</span>
+<span id="cb13-100"><a href="#cb13-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-103"><a href="#cb13-103" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb13-104"><a href="#cb13-104" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb13-105"><a href="#cb13-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-106"><a href="#cb13-106" aria-hidden="true" tabindex="-1"></a>lancamento <span class="ot">&lt;-</span> <span class="fu">c</span>( <span class="dv">1</span> , <span class="dv">2</span> , <span class="dv">3</span> , <span class="dv">4</span> , <span class="dv">5</span> , <span class="dv">6</span> , <span class="dv">7</span> , <span class="dv">8</span> , <span class="dv">9</span> , <span class="dv">10</span> , <span class="dv">11</span> , <span class="dv">12</span> , <span class="dv">13</span> , <span class="dv">14</span> , <span class="dv">15</span> , <span class="dv">16</span> , <span class="dv">17</span> , <span class="dv">18</span> , <span class="dv">19</span> , <span class="dv">20</span> , <span class="dv">21</span> , <span class="dv">22</span> , <span class="dv">23</span> , <span class="dv">24</span> , <span class="dv">25</span> , <span class="dv">26</span> , <span class="dv">27</span>, <span class="dv">28</span> , <span class="dv">29</span> , <span class="dv">30</span> , <span class="dv">31</span> ,<span class="dv">32</span> ,<span class="dv">33</span> , <span class="dv">34</span> , <span class="dv">35</span> , <span class="dv">36</span> , <span class="dv">37</span> , <span class="dv">38</span> , <span class="dv">39</span> , <span class="dv">40</span> )</span>
+<span id="cb13-107"><a href="#cb13-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-108"><a href="#cb13-108" aria-hidden="true" tabindex="-1"></a>distancia  <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">1.96</span>,<span class="fl">1.95</span>,<span class="fl">1.99</span>,<span class="fl">1.93</span>,<span class="fl">2.05</span>,<span class="fl">2.13</span>,<span class="fl">2.8</span>,<span class="fl">1.99</span>,<span class="fl">2.5</span>,<span class="fl">2.8</span>,<span class="fl">1.99</span>,<span class="fl">1.88</span>,<span class="fl">2.01</span>,</span>
+<span id="cb13-109"><a href="#cb13-109" aria-hidden="true" tabindex="-1"></a>                <span class="fl">1.97</span>,<span class="fl">2.0</span>,<span class="fl">1.72</span>,<span class="fl">1.86</span>,<span class="fl">1.95</span>,<span class="fl">1.92</span>,<span class="fl">2.03</span>,<span class="fl">1.71</span>,<span class="fl">1.64</span>,<span class="fl">1.87</span>,<span class="fl">1.96</span>,<span class="fl">1.93</span>,<span class="fl">1.77</span>,</span>
+<span id="cb13-110"><a href="#cb13-110" aria-hidden="true" tabindex="-1"></a>                <span class="fl">1.95</span>,<span class="fl">1.93</span>,<span class="fl">1.98</span>,<span class="fl">1.96</span>,<span class="fl">1.98</span>,<span class="fl">1.68</span>,<span class="fl">1.82</span>,<span class="fl">1.84</span>,<span class="fl">1.9</span>,<span class="fl">1.87</span>,<span class="fl">1.67</span>,<span class="fl">1.51</span>,<span class="fl">1.68</span>,<span class="fl">1.72</span>)</span>
+<span id="cb13-111"><a href="#cb13-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-112"><a href="#cb13-112" aria-hidden="true" tabindex="-1"></a><span class="co"># Frequência</span></span>
+<span id="cb13-113"><a href="#cb13-113" aria-hidden="true" tabindex="-1"></a>freq <span class="ot">&lt;-</span> <span class="fu">table</span>(distancia)</span>
+<span id="cb13-114"><a href="#cb13-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-115"><a href="#cb13-115" aria-hidden="true" tabindex="-1"></a><span class="co"># Tabela horizontal dos dados</span></span>
+<span id="cb13-116"><a href="#cb13-116" aria-hidden="true" tabindex="-1"></a>tabela <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
+<span id="cb13-117"><a href="#cb13-117" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Distância (m)"</span> <span class="ot">=</span> distancia</span>
+<span id="cb13-118"><a href="#cb13-118" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-119"><a href="#cb13-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-120"><a href="#cb13-120" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb13-121"><a href="#cb13-121" aria-hidden="true" tabindex="-1"></a>  tabela,</span>
+<span id="cb13-122"><a href="#cb13-122" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">paste0</span>(<span class="st">"N"</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">40</span> ),</span>
+<span id="cb13-123"><a href="#cb13-123" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Tabela 1: Dados dos lançamentos (horizontal)"</span></span>
+<span id="cb13-124"><a href="#cb13-124" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-125"><a href="#cb13-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-126"><a href="#cb13-126" aria-hidden="true" tabindex="-1"></a><span class="co"># Tabela de frequência</span></span>
+<span id="cb13-127"><a href="#cb13-127" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb13-128"><a href="#cb13-128" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.data.frame</span>(freq),</span>
+<span id="cb13-129"><a href="#cb13-129" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Distância (m)"</span>, <span class="st">"Frequência"</span>),</span>
+<span id="cb13-130"><a href="#cb13-130" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Tabela 2: Frequência das distâncias"</span></span>
+<span id="cb13-131"><a href="#cb13-131" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-132"><a href="#cb13-132" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-133"><a href="#cb13-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-134"><a href="#cb13-134" aria-hidden="true" tabindex="-1"></a><span class="fu">## 📚 Cálculos</span></span>
+<span id="cb13-135"><a href="#cb13-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-136"><a href="#cb13-136" aria-hidden="true" tabindex="-1"></a><span class="fu">## A seguir, os cálculos da frequência de cada valor</span></span>
+<span id="cb13-137"><a href="#cb13-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-140"><a href="#cb13-140" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb13-141"><a href="#cb13-141" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb13-142"><a href="#cb13-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-143"><a href="#cb13-143" aria-hidden="true" tabindex="-1"></a><span class="co"># calcular frequência de cada valor</span></span>
+<span id="cb13-144"><a href="#cb13-144" aria-hidden="true" tabindex="-1"></a>freq <span class="ot">&lt;-</span> <span class="fu">table</span>(distancia)</span>
+<span id="cb13-145"><a href="#cb13-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-146"><a href="#cb13-146" aria-hidden="true" tabindex="-1"></a><span class="co"># associar frequência a cada observação</span></span>
+<span id="cb13-147"><a href="#cb13-147" aria-hidden="true" tabindex="-1"></a>freq_individual <span class="ot">&lt;-</span> freq[<span class="fu">as.character</span>(distancia)]</span>
+<span id="cb13-148"><a href="#cb13-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-149"><a href="#cb13-149" aria-hidden="true" tabindex="-1"></a><span class="co"># Gerando tabela horizontal</span></span>
+<span id="cb13-150"><a href="#cb13-150" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb13-151"><a href="#cb13-151" aria-hidden="true" tabindex="-1"></a>  tabela,</span>
+<span id="cb13-152"><a href="#cb13-152" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">paste0</span>(<span class="st">"N"</span>, lancamento)</span>
+<span id="cb13-153"><a href="#cb13-153" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-154"><a href="#cb13-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-155"><a href="#cb13-155" aria-hidden="true" tabindex="-1"></a><span class="co"># calcular frequência de cada valor</span></span>
+<span id="cb13-156"><a href="#cb13-156" aria-hidden="true" tabindex="-1"></a>freq <span class="ot">&lt;-</span> <span class="fu">table</span>(distancia)</span>
+<span id="cb13-157"><a href="#cb13-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-158"><a href="#cb13-158" aria-hidden="true" tabindex="-1"></a><span class="co"># associar frequência a cada observação</span></span>
+<span id="cb13-159"><a href="#cb13-159" aria-hidden="true" tabindex="-1"></a>freq_individual <span class="ot">&lt;-</span> freq[<span class="fu">as.character</span>(distancia)]</span>
+<span id="cb13-160"><a href="#cb13-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-161"><a href="#cb13-161" aria-hidden="true" tabindex="-1"></a><span class="co"># montar tabela horizontal</span></span>
+<span id="cb13-162"><a href="#cb13-162" aria-hidden="true" tabindex="-1"></a>tabela_x <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
+<span id="cb13-163"><a href="#cb13-163" aria-hidden="true" tabindex="-1"></a>  <span class="at">Distancia =</span> <span class="fu">as.numeric</span>(<span class="fu">names</span>(freq)),</span>
+<span id="cb13-164"><a href="#cb13-164" aria-hidden="true" tabindex="-1"></a>  <span class="at">Frequencia =</span> <span class="fu">as.numeric</span>(freq)</span>
+<span id="cb13-165"><a href="#cb13-165" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-166"><a href="#cb13-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-167"><a href="#cb13-167" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-168"><a href="#cb13-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-169"><a href="#cb13-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-172"><a href="#cb13-172" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb13-173"><a href="#cb13-173" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb13-174"><a href="#cb13-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-175"><a href="#cb13-175" aria-hidden="true" tabindex="-1"></a>moda <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb13-176"><a href="#cb13-176" aria-hidden="true" tabindex="-1"></a>  ux <span class="ot">&lt;-</span> <span class="fu">unique</span>(x)</span>
+<span id="cb13-177"><a href="#cb13-177" aria-hidden="true" tabindex="-1"></a>  ux[<span class="fu">which.max</span>(<span class="fu">tabulate</span>(<span class="fu">match</span>(x, ux)))]</span>
+<span id="cb13-178"><a href="#cb13-178" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-179"><a href="#cb13-179" aria-hidden="true" tabindex="-1"></a><span class="fu">moda</span>(distancia)</span>
+<span id="cb13-180"><a href="#cb13-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-181"><a href="#cb13-181" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-182"><a href="#cb13-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-183"><a href="#cb13-183" aria-hidden="true" tabindex="-1"></a><span class="fu">## A seguir , uma análise estatística das distâncias, a começar por :</span></span>
+<span id="cb13-184"><a href="#cb13-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-185"><a href="#cb13-185" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1. Mediana</span></span>
+<span id="cb13-186"><a href="#cb13-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-187"><a href="#cb13-187" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb13-188"><a href="#cb13-188" aria-hidden="true" tabindex="-1"></a>Md = \frac{x_{\frac{n}{2}} + x_{\frac{n}{2}+1}}{2}</span>
+<span id="cb13-189"><a href="#cb13-189" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb13-190"><a href="#cb13-190" aria-hidden="true" tabindex="-1"></a>Resultado:</span>
+<span id="cb13-191"><a href="#cb13-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-194"><a href="#cb13-194" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb13-195"><a href="#cb13-195" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Mediana ="</span>, <span class="fu">median</span>(distancia))</span>
+<span id="cb13-196"><a href="#cb13-196" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-197"><a href="#cb13-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-198"><a href="#cb13-198" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2.Desvio padrão</span></span>
+<span id="cb13-199"><a href="#cb13-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-200"><a href="#cb13-200" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb13-201"><a href="#cb13-201" aria-hidden="true" tabindex="-1"></a>s &lt;- sqrt( sum((distancia - media)^2) / (n - 1) )</span>
+<span id="cb13-202"><a href="#cb13-202" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb13-203"><a href="#cb13-203" aria-hidden="true" tabindex="-1"></a>Resultado :</span>
+<span id="cb13-204"><a href="#cb13-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-207"><a href="#cb13-207" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb13-208"><a href="#cb13-208" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">sd</span>(distancia), <span class="dv">4</span>)</span>
+<span id="cb13-209"><a href="#cb13-209" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-210"><a href="#cb13-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-211"><a href="#cb13-211" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3.Moda</span></span>
+<span id="cb13-212"><a href="#cb13-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-213"><a href="#cb13-213" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb13-214"><a href="#cb13-214" aria-hidden="true" tabindex="-1"></a>Mo = \text{valor mais frequente}</span>
+<span id="cb13-215"><a href="#cb13-215" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb13-216"><a href="#cb13-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-217"><a href="#cb13-217" aria-hidden="true" tabindex="-1"></a>Resultado:</span>
+<span id="cb13-218"><a href="#cb13-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-221"><a href="#cb13-221" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb13-222"><a href="#cb13-222" aria-hidden="true" tabindex="-1"></a>moda <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
+<span id="cb13-223"><a href="#cb13-223" aria-hidden="true" tabindex="-1"></a>  ux <span class="ot">&lt;-</span> <span class="fu">unique</span>(x)</span>
+<span id="cb13-224"><a href="#cb13-224" aria-hidden="true" tabindex="-1"></a>  ux[<span class="fu">which.max</span>(<span class="fu">tabulate</span>(<span class="fu">match</span>(x, ux)))]</span>
+<span id="cb13-225"><a href="#cb13-225" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-226"><a href="#cb13-226" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Moda ="</span>, <span class="fu">moda</span>(distancia))</span>
+<span id="cb13-227"><a href="#cb13-227" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-228"><a href="#cb13-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-229"><a href="#cb13-229" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🧠 Considerações finais</span></span>
+<span id="cb13-230"><a href="#cb13-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-231"><a href="#cb13-231" aria-hidden="true" tabindex="-1"></a>O experimento atingiu seu objetivo ao permitir a análise da influência de diferentes fatores na distância percorrida pela bolinha, evidenciando a variabilidade dos resultados por meio de ferramentas estatísticas.</span>
+<span id="cb13-232"><a href="#cb13-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-233"><a href="#cb13-233" aria-hidden="true" tabindex="-1"></a>Observou-se, com isso,que o ângulo de lançamento, a força aplicada, o atrito (devido ao pó de giz) e erros de medição e comunicação impactaram diretamente os dados. Como aprendizado, destaca-se a importância do controle experimental e da análise estatística na interpretação de resultados reais.</span>
+<span id="cb13-234"><a href="#cb13-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-235"><a href="#cb13-235" aria-hidden="true" tabindex="-1"></a>A qualidade dos dados foi suficiente, porém com dispersão elevada, indicando a presença de erros experimentais. Para melhorias, recomenda-se padronizar o lançamento, fixar corretamente a trena e reduzir interferências durante a coleta dos dados.</span>
 </code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
