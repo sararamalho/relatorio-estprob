@@ -23,22 +23,26 @@ execute:
   warning: false
   message: false
 ---
-### 📌 Introdução
 
-## Apresentação do Experimento
+# **📌 Introdução**
+
+**Apresentação do Experimento**
 
 As distribuições de probabilidade são ferramentas fundamentais da Estatística para modelar fenômenos aleatórios e interpretar dados. Entre as principais distribuições estudadas estão a Binomial, Poisson e Normal, aplicadas respectivamente a eventos discretos, ocorrências em intervalos e variáveis contínuas. Neste relatório, essas distribuições foram analisadas teoricamente e computacionalmente utilizando a linguagem R e o pacote.
 
-### Objetivo geral
+## **Objetivo geral**
 
 Aplicar distribuições de probabilidade discretas e contínuas por meio de cálculos analíticos e computacionais no R.
 
-### Objetivos específicos
+## **Objetivos específicos**
+
 Compreender variáveis aleatórias discretas e contínuas;
 
 Estudar as distribuições Binomial, Poisson e Normal;
 
 Resolver exemplos probabilísticos analiticamente;
+
+Comparar resultados teóricos e computacionais;
 
 Aplicar funções estatísticas no R usando o pacote leem;
 
@@ -48,44 +52,48 @@ Explorar distribuições adicionais discretas e contínuas
 
 ---
 
-## 📚  Fundamentação Teórica
+# **📚  Fundamentação Teórica**
 
 A Estatística Probabilística estuda fenômenos aleatórios por meio das distribuições de probabilidade, que descrevem matematicamente o comportamento das variáveis aleatórias. Essas variáveis podem ser classificadas em discretas ou contínuas, dependendo da natureza dos valores assumidos.
 
-### Variáveis aleatórias discretas 
+## **Variáveis aleatórias discretas** 
 
 Assumem valores contáveis e isolados, como quantidade de defeitos, número de chamadas ou número de sucessos em experimentos. Exemplos desse tipo:
 
-##### Distribuição Binomial:
+**Distribuição Binomial:**
 
 Utilizada em experimentos com número fixo de tentativas independentes e dois possíveis resultados, sucesso ou fracasso;
 
-##### Distribuição de Poisson: 
+**Distribuição de Poisson:**
+
 Aplicada à contagem de ocorrências em intervalos de tempo, espaço ou volume;
 
-### Variáveis aleatórias contínuas 
+## **Variáveis aleatórias contínuas**
 
 Podem assumir infinitos valores em um intervalo, como tempo, altura, massa e temperatura. Entre as distribuições contínuas destacam-se:
 
-##### Distribuição Normal: 
+**Distribuição Normal:** 
 
 Utilizada para modelar fenômenos naturais e experimentais que apresentam comportamento aproximadamente simétrico em torno da média;
 
+---
 
 ## Distribuição Binomial (Discreta)
 
-### Fórmula : 
+**Fórmula:**
+
 $$
 P(X=x)=\binom{n}{x}p^x(1-p)^{n-x}
 $$
 
-### Exemplo Analítico :
+**Exemplo Analítico:**
 
 Considere uma máquina que produz peças, onde a probabilidade de uma peça ser defeituosa é de 10%. Deseja-se calcular a probabilidade de encontrar exatamente 2 peças defeituosas em 5 peças analisadas.
 
 Dados:  n=5   ,    p=0,1   , x=2
 
-#### Resultado:
+**Resultado:**
+
 ```{r}
 library(leem)
 
@@ -104,19 +112,19 @@ print(prob_binomial)
 
 ## Distribuição de Poisson (Discreta)
 
-### Fórmula : 
+**Fórmula:** 
 
 $$
 P(X=x)=\frac{e^{-\lambda}\lambda^x}{x!}
 $$
 
-### Exemplo Analítico :
+**Exemplo Analítico:**
 
 Um sistema recebe em média 3 chamadas por minuto. Qual a probabilidade de receber exatamente 5 chamadas em um minuto?
 
 Dados: λ=3    ,     x=5
 
-#### Resultado:
+**Resultado:**
 
 ```{r}
 library(leem)
@@ -134,20 +142,20 @@ print(prob_poisson)
 
 ## Distribuição Normal (contínua)
 
-### Fórmula : 
+**Fórmula:**
 
 $$
 f(x)=\frac{1}{\sigma\sqrt{2\pi}}
 e^{-\frac{(x-\mu)^2}{2\sigma^2}}
 $$
 
-### Exemplo Analítico :
+**Exemplo Analítico:**
 
 Considere uma variável com média 70 e desvio padrão 10. Qual a probabilidade de um valor ser menor que 85?
 
 Dados:  μ=70  ,   σ=10   ,  x=85
 
-#### Resultado:
+**Resultado:**
 
 ```{r}
 library(leem)
@@ -165,13 +173,13 @@ print(z)
 
 ---
 
-## ⚙️ Metodologia
+## **⚙️ Metodologia**
 
 Foi realizado um estudo teórico das distribuições probabilísticas e, posteriormente, exemplos práticos foram resolvidos manualmente e implementados no R. Utilizaram-se funções estatísticas do pacote leem para calcular probabilidades e visualizar o comportamento das distribuições com base nos exemplos dados.Também foi usado IA - Chat GPT para gerar cada código.
 
 ---
 
-## 🔍 Resultados e Discussão
+## **🔍 Resultados e Discussão**
 
 Os resultados mostraram que cada distribuição é mais adequada para um tipo específico de problema. A distribuição Binomial foi utilizada em situações com número fixo de tentativas e dois possíveis resultados, enquanto a Poisson modelou ocorrências aleatórias em intervalos de tempo ou espaço. Já a distribuição Normal representou variáveis contínuas influenciadas por diversos fatores, como medições e fenômenos naturais.
 A precisão de cada distribuição depende do contexto analisado: a Binomial é mais eficiente para sucessos e fracassos, a Poisson para frequência de eventos e a Normal para dados contínuos e grandes amostras. Os cálculos realizados no R apresentaram resultados compatíveis com os cálculos analíticos, demonstrando a eficiência do software na análise probabilística.

@@ -1,0 +1,932 @@
+---
+# Só mude aqui!!!!
+author: "Sarah O. Ramalho"
+title: "Relatório de Aula Prática 06"
+bibliography: referencias.bib
+# A partir daqui nao faca alteracoes!!!!!
+link-citations: true
+csl: associacao-brasileira-de-normas-tecnicas-ipea.csl
+subtitle: "<a href='https://bendeivide.github.io/courses/epaec/' target='_blank'>Estatística e Probabilidade</a> </br> <a href='https://bendeivide.github.io' target='_blank'>Prof. Ben Dêivide (DEFIM/CAP/UFSJ)</a>"
+include-before-body: header.html
+date: today
+lang: pt-BR
+format:
+  html:
+    toc: true
+    number-sections: true
+    theme: bootstrap
+    #css: styles.css
+    code-fold: true
+    code-tools: true
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+## 📌 **Introdução**
+
+As distribuições Qui-quadrado e F são distribuições contínuas utilizadas na Estatística Inferencial para análise de variâncias, comparação entre grupos e testes estatísticos. Ambas estão relacionadas às distribuições amostrais e derivam de populações com distribuição Normal.
+
+A distribuição Qui-quadrado associa-se principalmente à variância amostral e à análise de frequências, enquanto a distribuição F é utilizada para comparar variâncias e realizar análise de variância (ANOVA).
+
+Neste relatório serão apresentados os conceitos, propriedades, funções amostrais relacionadas e aplicações dessas distribuições utilizando a linguagem R.
+
+---
+
+## **Objetivo geral**
+
+Estudar as distribuições Qui-quadrado e F, analisando suas propriedades, relações com distribuições amostrais e aplicações estatísticas utilizando o R.
+
+
+## **Objetivos específicos**
+
+- Compreender o conceito das distribuições Qui-quadrado e F;
+- Relacionar essas distribuições às distribuições amostrais;
+- Identificar as funções da amostra associadas a cada distribuição;
+- Diferenciar as aplicações das distribuições;
+- Aplicar cálculos estatísticos utilizando o R;
+- Interpretar aplicações práticas em análise de dados.
+
+---
+
+# **📚 Fundamentação Teórica**
+
+## **Distribuição Normal**
+
+È um conjunto de dados cujo comportamento segue a distribuição Normal, isto é, os valores tendem a se concentrar próximos da média formando uma curva em sino.
+
+Em uma população Normal:
+
+a maioria dos valores fica perto da média;
+poucos valores ficam muito acima ou muito abaixo;
+os dados possuem simetria.
+Exemplo simples
+Altura das pessoas
+
+A maior parte das pessoas possui:
+
+altura próxima da média.
+
+Pouquíssimas são:
+
+extremamente baixas;
+extremamente altas.
+
+Isso forma a famosa curva Normal:
+
+meio da curva → muitos valores;
+extremidades → poucos valores.
+
+---
+
+**Fórmula**
+
+$$
+f(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}
+$$
+
+---
+
+**Significado dos termos**
+
+* $(f(x))$: densidade de probabilidade;
+* $(x)$: valor observado;
+* $(\sigma)$: desvio padrão;
+* $(\sigma^2)$: variância;
+* $(e)$: constante exponencial;
+* $(\pi)$: constante pi.
+
+---
+
+**È utilizada quando:**
+
+* os dados apresentam comportamento natural e contínuo;
+* os valores concentram-se ao redor da média;
+* deseja-se modelar fenômenos reais.
+
+---
+
+**Exemplos de aplicação**
+
+* altura das pessoas;
+* peso;
+* temperatura;
+* notas de prova;
+* erros experimentais.
+
+---
+
+**Exemplo simples**
+
+Suponha que as notas de uma prova tenham:
+
+* média igual a $7$;
+* desvio padrão igual a $1$
+(significa que a maioria das notas tendem a ficar entre $7-1 = 6$ e $7+1 = 8$).
+
+A maioria dos alunos terá notas próximas de:
+
+* $7$
+
+Poucos terão notas:
+
+* muito baixas;
+* ou muito altas.
+
+---
+
+**Gráfico:**
+
+
+```{r}
+# Média e desvio padrão
+media <- 7
+desvio <- 1
+
+# Valores do eixo x
+x <- seq(3, 11, by = 0.01)
+
+# Função densidade normal
+y <- dnorm(x, mean = media, sd = desvio)
+
+# Criando o gráfico
+plot(
+  x, y,
+  type = "l",
+  lwd = 3,
+  col = "blue",
+  main = "Distribuição Normal das Notas",
+  xlab = "Notas",
+  ylab = "Densidade"
+)
+
+# Linha vertical da média
+abline(v = media, col = "red", lwd = 2, lty = 2)
+
+# Região entre 6 e 8
+polygon(
+  c(seq(6,8,0.01), 8, 6),
+  c(dnorm(seq(6,8,0.01), media, desvio), 0, 0),
+  col = "lightblue",
+  border = NA
+)
+
+# Texto explicativo
+text(7, 0.42, "Média = 7", col = "red")
+
+```
+
+---
+
+**Interpretação**
+
+O gráfico possui formato de sino.
+
+A região central representa:
+
+* maior concentração de valores.
+
+As extremidades representam:
+
+* valores raros.
+
+Quanto maior o desvio padrão:
+
+* mais espalhada fica a curva.
+
+Quanto menor o desvio padrão:
+
+* mais concentrados ficam os dados próximos da média.
+
+---
+
+## **Distribuição amostral**
+
+Ela representa o comportamento estatístico de uma medida calculada a partir de várias amostras retiradas de uma população.
+
+Ou seja:
+
+- coleta-se várias amostras;
+- calcula-se uma medida em cada amostra;
+- observa-se como esses valores variam.
+
+Essas medidas podem ser:
+
+- média amostral;
+- variância amostral;
+- razão entre variâncias.
+
+As distribuições Qui-quadrado e F surgem justamente do comportamento dessas medidas amostrais.
+
+---
+
+## **Distribuição Qui-Quadrado**
+
+A distribuição Qui-quadrado é uma distribuição contínua utilizada principalmente para analisar variabilidade, frequências e variâncias em estudos estatísticos.
+
+Ela surge a partir da soma dos quadrados de variáveis Normais padronizadas independentes.
+
+A distribuição Qui-quadrado:
+
+* assume apenas valores positivos;
+* possui assimetria à direita;
+* depende dos graus de liberdade.
+
+---
+
+**Quando é utilizada**
+
+A distribuição Qui-quadrado é utilizada quando se deseja:
+
+* analisar variâncias;
+* comparar frequências observadas e esperadas;
+* verificar independência entre variáveis;
+* realizar testes de aderência;
+* construir intervalos de confiança para variância.
+
+---
+
+**Fórmula**
+
+$$
+\chi^2=\sum_{i=1}^{n}Z_i^2
+$$
+---
+
+**Significado dos termos**
+
+* $(\chi^2)$: variável Qui-quadrado;
+* $(Z_i)$: variável Normal padrão;
+* $(n)$: quantidade de variáveis ou graus de liberdade;
+* $(\sum)$: soma dos quadrados.
+
+---
+
+**Relação com a Variância**
+
+Quando várias amostras são retiradas de uma população Normal:
+
+* cada amostra possui uma variância;
+* essas variâncias variam aleatoriamente.
+
+A distribuição Qui-quadrado modela justamente:
+
+* o comportamento dessas variâncias amostrais.
+
+Essa relação é dada por:
+
+$$
+\frac{(n-1)S^2}{\sigma^2}\sim\chi^2_{(n-1)}
+$$
+
+---
+
+**Sendo:**
+
+* $(S^2)$: variância da amostra;
+* $(\sigma^2)$: variância da população;
+* $(n-1)$: graus de liberdade.
+
+---
+
+A fórmula mostra que:
+
+* a variância amostral segue uma distribuição Qui-quadrado ajustada pelos graus de liberdade.
+
+---
+
+**Exemplo do uso do teste Qui-Quadrado**
+
+Suponha uma amostra com:
+
+- tamanho da amostra: $n = 6$
+- variância amostral: $S^2 = 4$
+- variância populacional: $\sigma^2 = 2$
+
+---
+
+**Fórmula**
+
+$$
+\chi^2=\frac{(n-1)S^2}{\sigma^2}
+$$
+
+---
+
+**Substituindo os valores**
+
+$$
+\chi^2=\frac{(6-1)\cdot4}{2}
+$$
+
+$$
+\chi^2=\frac{20}{2}
+$$
+
+$$
+\chi^2=10
+$$
+
+---
+
+**Interpretação**
+
+O valor:
+
+$$
+\chi^2=10
+$$
+
+representa a variabilidade observada na amostra em relação à variância esperada da população.
+
+Quanto maior o valor de:
+
+$$
+\chi^2
+$$
+
+maior tende a ser a diferença entre a variabilidade da amostra e da população.
+
+---
+
+**Probabilidade no R**
+
+```{r}
+pchisq(10, df = 5)
+```
+
+---
+
+**Exemplo no R**
+
+Calcular:
+
+$$
+P(X<10)
+$$
+
+Tal expressão representa a probabilidade da variável Qui-quadrado assumir valores menores que 10.
+
+---
+
+com:
+
+$$
+gl=5
+$$
+$gl$: grau de liberdade . $gl = 5$ significa que existe 5 dados que influencial o gráfico da curva.
+
+---
+
+Probabilidade acumulada da distribuição Qui-quadrado, calculada por pchisq:
+
+```{r}
+pchisq(10, df = 5)
+```
+
+Isso significa que existe cerca de: $92,48\%$ de probabilidade do valor da variável Qui-quadrado ser menor que 10
+
+---
+
+**Gráfico**
+
+```{r}
+# valores do eixo x
+x <- seq(0, 20, by = 0.1)
+
+# densidade Qui-quadrado
+y <- dchisq(x, df = 5)
+
+# gráfico
+plot(x, y,
+     type = "l",
+     lwd = 2,
+     col = "blue",
+     main = "Distribuição Qui-Quadrado",
+     xlab = expression(chi^2),
+     ylab = "Densidade")
+
+# linha vertical no valor calculado
+abline(v = 10,
+       col = "red",
+       lwd = 2,
+       lty = 2)
+
+# texto explicativo
+text(10, 0.03,
+     labels = expression(chi^2==10),
+     pos = 4,
+     col = "red")
+```
+
+---
+
+# Interpretação do gráfico
+
+A curva representa a distribuição Qui-quadrado com:
+- $gl = 5$.
+
+A linha vermelha representa o valor calculado:
+- $χ^2 = 10$
+
+A área acumulada antes dessa linha corresponde à probabilidade:
+
+$$
+P(X<10)
+$$
+
+que vale aproximadamente:
+
+- $92,48\%$
+
+O gráfico mostra que:
+- a distribuição é assimétrica à direita;
+- assume apenas valores positivos;
+- depende dos graus de liberdade.
+
+---
+
+**Características do gráfico**
+
+* distribuição contínua;
+* assimétrica à direita;
+* assume apenas valores positivos;
+* depende dos graus de liberdade.
+* maior concentração próxima da origem.
+
+Isso ocorre porque:
+
+* variâncias não podem ser negativas.
+
+À medida que os valores aumentam:
+
+* cresce a evidência de maior variabilidade ou maior diferença entre valores observados e esperados.
+
+Quando os graus de liberdade aumentam:
+
+* a curva torna-se mais parecida com a distribuição Normal.
+
+---
+
+## **Distribuição F**
+
+A distribuição F é uma distribuição contínua utilizada principalmente para comparar variâncias entre grupos ou amostras.
+
+Ela surge a partir da razão entre duas variáveis Qui-quadrado independentes divididas por seus respectivos graus de liberdade.
+
+A distribuição F:
+
+* assume apenas valores positivos;
+* possui assimetria à direita;
+* depende de dois graus de liberdade;
+* é muito utilizada em testes estatísticos e ANOVA.
+
+---
+
+**Quando é utilizada**
+
+A distribuição F é utilizada quando se deseja:
+
+* comparar variâncias entre grupos;
+* verificar diferenças entre médias;
+* realizar análise de variância (ANOVA);
+* comparar modelos estatísticos;
+* analisar regressões.
+
+---
+
+**Fórmula**
+
+$$
+F=\frac{\chi_1^2/v_1}{\chi_2^2/v_2}
+$$
+
+---
+
+**Significado dos termos**
+
+* $F$: variável com distribuição F;
+* $\chi_1^2$: primeira variável Qui-quadrado;
+* $\chi_2^2$: segunda variável Qui-quadrado;
+* $v_1$: graus de liberdade do numerador;
+* $v_2$: graus de liberdade do denominador.
+
+---
+
+**Relação com a Variância**
+
+Quando duas amostras são retiradas de populações Normais:
+
+* cada amostra possui sua variância;
+* essas variâncias podem ser comparadas.
+
+A distribuição F modela justamente:
+
+* a razão entre variâncias amostrais.
+
+Essa relação é dada por:
+
+$$
+F=\frac{S_1^2}{S_2^2}
+$$
+
+---
+
+**Sendo:**
+
+$$(S_1^2)$$ 
+
+variância da primeira amostra;
+
+$$(S_2^2)$$
+variância da segunda amostra.
+
+A fórmula mostra que:
+
+* a distribuição F compara a variabilidade entre duas amostras.
+
+---
+
+**Exemplo do uso da distribuição F**
+
+Suponha duas amostras com:
+
+* variância da amostra 1: $(S_1^2 = 8)$
+* variância da amostra 2: $(S_2^2 = 4)$
+
+---
+
+**Fórmula**
+
+$$
+F=\frac{S_1^2}{S_2^2}
+$$
+
+---
+
+**Substituindo os valores**
+
+$$
+F=\frac{8}{4}
+$$
+
+$$
+F=2
+$$
+
+---
+
+**Interpretação**
+
+O valor:
+
+$$
+F=2
+$$
+
+indica que a variância da primeira amostra é duas vezes maior que a variância da segunda amostra.
+
+Quanto maior o valor de:
+
+$$
+F
+$$
+
+maior tende a ser a diferença entre as variâncias analisadas.
+
+Quando:
+
+$$
+F\approx1
+$$
+
+as variâncias tendem a ser semelhantes.
+
+---
+
+**Probabilidade no R**
+
+```{r}
+pf(2, df1 = 5, df2 = 10)
+```
+
+---
+
+**Exemplo no R**
+
+Calcular:
+
+$$
+P(X<2)
+$$
+
+Tal expressão representa a probabilidade da variável F assumir valores menores que 2.
+
+com:
+
+$$
+gl_1=5
+$$
+
+e:
+
+$$
+gl_2=10
+$$
+
+Onde:
+
+* $df1 = 5$: representa os graus de liberdade do numerador;
+* $df2 = 10$: representa os graus de liberdade do denominador.
+
+Os graus de liberdade influenciam o formato da curva da distribuição F.
+
+---
+
+Probabilidade acumulada da distribuição F, calculada por `pf`:
+
+```{r}
+pf(2, df1 = 5, df2 = 10)
+```
+
+Isso significa que existe cerca de:
+
+* $83,58\%$
+
+de probabilidade do valor da variável F ser menor que 2.
+
+---
+
+**Gráfico**
+
+```{r}
+# valores do eixo x
+x <- seq(0, 5, by = 0.1)
+
+# densidade da distribuição F
+y <- df(x, df1 = 5, df2 = 10)
+
+# gráfico
+plot(x, y,
+     type = "l",
+     lwd = 2,
+     col = "red",
+     main = "Distribuição F",
+     xlab = "Valores de F",
+     ylab = "Densidade")
+
+# linha vertical no valor calculado
+abline(v = 2,
+       col = "blue",
+       lwd = 2,
+       lty = 2)
+
+# texto explicativo
+text(2, 0.5,
+     labels = "F = 2",
+     pos = 4,
+     col = "blue")
+```
+
+---
+
+**Interpretação do gráfico**
+
+A curva representa a distribuição F com:
+
+* $gl_1 = 5$;
+* $gl_2 = 10$.
+
+A linha azul representa o valor calculado:
+
+* $F = 2$
+
+A área acumulada antes dessa linha corresponde à probabilidade:
+
+$$
+P(X<2)
+$$
+
+que vale aproximadamente:
+
+* $83,58\%$
+
+O gráfico mostra que:
+
+* a distribuição é assimétrica à direita;
+* assume apenas valores positivos;
+* depende de dois graus de liberdade.
+
+---
+
+**Características do gráfico**
+
+* distribuição contínua;
+* assimétrica à direita;
+* assume apenas valores positivos;
+* depende de dois graus de liberdade;
+* maior concentração próxima da origem.
+
+Isso ocorre porque:
+
+* variâncias não podem ser negativas.
+
+À medida que os valores aumentam:
+
+* cresce a evidência de maior diferença entre variâncias amostrais.
+
+Quando os graus de liberdade aumentam:
+
+* a curva torna-se menos assimétrica e mais suave.
+
+---
+
+## **Diferença entre a Distribuição Qui-Quadrado e a Distribuição F**
+
+As distribuições Qui-quadrado e F são distribuições contínuas utilizadas na Estatística Inferencial, porém possuem objetivos diferentes.
+
+---
+
+**Distribuição Qui-Quadrado**
+
+A distribuição Qui-quadrado é utilizada principalmente para:
+
+- analisar variâncias;
+- comparar frequências observadas e esperadas;
+- verificar independência entre variáveis;
+- realizar testes de aderência.
+
+Ela está relacionada diretamente à variância amostral.
+
+---
+
+**Fórmula relacionada**
+
+$$
+\chi^2=\frac{(n-1)S^2}{\sigma^2}
+$$
+
+---
+
+**Distribuição F**
+
+A distribuição F é utilizada principalmente para:
+
+- comparar variâncias entre grupos;
+- realizar análise de variância (ANOVA);
+- comparar médias de grupos;
+- analisar regressões.
+
+Ela está relacionada à razão entre duas variâncias amostrais.
+
+---
+
+**Fórmula relacionada**
+
+$$
+F=\frac{S_1^2}{S_2^2}
+$$
+
+---
+
+**Quando usar Qui-Quadrado**
+
+Use a distribuição Qui-quadrado quando:
+- desejar analisar variabilidade;
+- trabalhar com frequências;
+- verificar independência;
+- estudar aderência de dados.
+
+**Exemplos**
+
+- teste de independência;
+- controle de qualidade;
+- análise de defeitos;
+- variância amostral.
+
+---
+
+**Quando usar Distribuição F**
+
+Use a distribuição F quando:
+- desejar comparar grupos;
+- comparar variâncias;
+- verificar diferenças entre médias;
+- realizar ANOVA.
+
+---
+
+**Exemplos**
+
+- comparação entre máquinas;
+- comparação entre métodos;
+- análise experimental;
+- regressão estatística.
+
+---
+
+**Relação entre elas**
+
+A distribuição F deriva da distribuição Qui-quadrado.
+
+Ela é formada pela razão entre duas variáveis Qui-quadrado independentes:
+
+$$
+F=\frac{\chi_1^2/v_1}{\chi_2^2/v_2}
+$$
+
+---
+
+**Significado dos termos**
+
+* $F$: variável com distribuição F;
+* $\chi_1^2$: primeira variável Qui-quadrado;
+* $\chi_2^2$: segunda variável Qui-quadrado;
+* $v_1$: graus de liberdade do numerador;
+* $v_2$: graus de liberdade do denominador.
+
+---
+
+**Explicação da fórmula**
+
+A fórmula compara duas variâncias por meio da razão entre duas distribuições Qui-quadrado ajustadas pelos seus graus de liberdade.
+
+O numerador representa a variabilidade do primeiro grupo:
+
+$$
+\frac{\chi_1^2}{v_1}
+$$
+
+O denominador representa a variabilidade do segundo grupo:
+
+$$
+\frac{\chi_2^2}{v_2}
+$$
+
+A divisão entre ambos produz o valor da distribuição F:
+
+$$
+F
+$$
+
+Se o valor de:
+
+$$
+F \approx 1
+$$
+
+as variâncias tendem a ser parecidas.
+
+Se:
+
+$$
+F > 1
+$$
+
+a variância do numerador tende a ser maior.
+
+Quanto maior o valor de:
+
+$$
+F
+$$
+
+maior tende a ser a diferença entre as variâncias comparadas.
+
+---
+
+**Resumo intuitivo**
+
+- Qui-quadrado → analisa variabilidade ou frequências;
+- F → compara variabilidades entre grupos.
+
+---
+
+## **⚙️ Metodologia**
+
+O desenvolvimento do relatório foi concedido com ajuda de conversas com o chat GPT.
+Pedindo para ele definir o que é cada conceito , como fazer o gráfico , fórmulas , entre outros.Tais informações recebidas foram verificadas a pedidos de correção de erros existentes e repetição do pedido.
+
+---
+
+## **🔍 Resultados e Discussão**
+
+Os resultados mostraram que as distribuições Qui-quadrado e F possuem grande importância na Estatística Inferencial.
+
+A distribuição Qui-quadrado apresentou relação direta com a variância amostral e testes de frequências, enquanto a distribuição F mostrou-se adequada para comparação entre variâncias e análise de grupos.
+
+Os gráficos evidenciaram que ambas são assimétricas à direita e dependem dos graus de liberdade. A Qui-quadrado relaciona-se à análise de uma variância, enquanto a distribuição F compara duas variâncias.
+
+Os cálculos realizados no R apresentaram resultados precisos e compatíveis com os valores teóricos, demonstrando a eficiência do software na análise estatística.
+
+---
+
+## **Conclusão**
+
+Conclui-se que as distribuições Qui-quadrado e F são fundamentais para análises estatísticas envolvendo variabilidade e comparação entre grupos.
+
+A distribuição Qui-quadrado é utilizada principalmente em testes de variância e frequências, enquanto a distribuição F é aplicada na comparação entre variâncias e em ANOVA.
+
+Os resultados obtidos no R permitiram compreender o comportamento gráfico e matemático dessas distribuições, reforçando sua importância na Estatística Inferencial.
+
