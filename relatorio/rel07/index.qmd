@@ -1,0 +1,239 @@
+---
+# Só mude aqui!!!!
+author: "Sarah O. Ramalho"
+title: "Relatório de Aula Prática 03"
+bibliography: referencias.bib
+# A partir daqui nao faca alteracoes!!!!!
+link-citations: true
+csl: associacao-brasileira-de-normas-tecnicas-ipea.csl
+subtitle: "<a href='https://bendeivide.github.io/courses/epaec/' target='_blank'>Estatística e Probabilidade</a> </br> <a href='https://bendeivide.github.io' target='_blank'>Prof. Ben Dêivide (DEFIM/CAP/UFSJ)</a>"
+include-before-body: header.html
+date: today
+lang: pt-BR
+format:
+  html:
+    toc: true
+    number-sections: true
+    theme: bootstrap
+    #css: styles.css
+    code-fold: true
+    code-tools: true
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+# Estimação Intervalar
+
+**Introdução**
+
+A estimação intervalar é uma técnica da inferência estatística utilizada para estimar parâmetros populacionais por meio de intervalos de confiança. Diferentemente da estimação pontual, ela fornece uma faixa de valores plausíveis para o parâmetro de interesse, associada a um nível de confiança.
+
+**Objetivo Geral**
+
+Estudar a construção de estimadores intervalares para médias, variâncias e proporções populacionais.
+
+**Objetivos Específicos**
+
+* Determinar o intervalo de confiança para a média populacional.
+* Determinar o intervalo de confiança para a variância populacional.
+* Construir intervalos para diferença entre médias.
+* Construir intervalos para razão entre variâncias.
+* Estudar intervalos aproximados e exatos para uma proporção Bernoulli.
+
+**Fundamentação Teórica**
+
+**Média Populacional conhecida)**
+
+Considere:
+
+$$
+X_1,\ldots,X_n \sim N(\mu,\sigma^2)
+$$
+
+A estatística padronizada é:
+
+$$
+Z=\frac{\bar X-\mu}{\sigma/\sqrt n}
+$$
+
+O intervalo de confiança para (\mu) é:
+
+$$
+IC(\mu)=
+\left[
+\bar X-z_{\alpha/2}\frac{\sigma}{\sqrt n},
+;
+\bar X+z_{\alpha/2}\frac{\sigma}{\sqrt n}
+\right]
+$$
+
+**Variância Populacional**
+
+Sob normalidade:
+
+$$
+\chi^2=
+\frac{(n-1)S^2}{\sigma^2}
+$$
+
+O intervalo para (\sigma^2) é:
+
+$$
+IC(\sigma^2)=
+\left[
+\frac{(n-1)S^2}
+{\chi^2_{1-\alpha/2}},
+;
+\frac{(n-1)S^2}
+{\chi^2_{\alpha/2}}
+\right]
+$$
+
+**Diferença entre Médias (Homocedasticidade)**
+
+Assumindo:
+
+$$
+\sigma_1^2=\sigma_2^2
+$$
+
+A variância combinada é:
+
+$$
+S_p^2=
+\frac{
+(n_1-1)S_1^2+
+(n_2-1)S_2^2
+}
+{n_1+n_2-2}
+$$
+
+O intervalo é:
+
+$$
+(\bar X-\bar Y)
+\pm
+t_{\alpha/2}
+S_p
+\sqrt{
+\frac1{n_1}
++
+\frac1{n_2}
+}
+$$
+
+**Diferença entre Médias (Heterocedasticidade)**
+
+Quando:
+
+$$
+\sigma_1^2 \neq \sigma_2^2
+$$
+
+utiliza-se o intervalo de Welch:
+
+$$
+(\bar X-\bar Y)
+\pm
+t_{\alpha/2}
+\sqrt{
+\frac{S_1^2}{n_1}
++
+\frac{S_2^2}{n_2}
+}
+$$
+
+**Razão entre Variâncias**
+
+A estatística utilizada é:
+
+$$
+F=
+\frac{S_1^2/\sigma_1^2}
+{S_2^2/\sigma_2^2}
+$$
+
+O intervalo para:
+
+$$
+\frac{\sigma_1^2}{\sigma_2^2}
+$$
+
+é:
+
+$$
+\left[
+\frac{S_1^2}{S_2^2}
+\frac1{F_{1-\alpha/2}},
+;
+\frac{S_1^2}{S_2^2}
+\frac1{F_{\alpha/2}}
+\right]
+$$
+
+**População Bernoulli**
+
+Para:
+
+$$
+X \sim Bernoulli(p)
+$$
+
+o estimador de (p) é:
+
+$$
+\hat p=\frac{x}{n}
+$$
+
+**Intervalo Aproximado**
+
+Baseado no Teorema Central do Limite:
+
+$$
+IC(p)=
+\hat p
+\pm
+z_{\alpha/2}
+\sqrt{
+\frac{\hat p(1-\hat p)}
+{n}
+}
+$$
+
+**Intervalo Exato (Clopper-Pearson)**
+
+Os limites são obtidos pela distribuição Beta:
+
+$$
+L=
+Beta^{-1}
+\left(
+\frac{\alpha}{2},
+x,
+n-x+1
+\right)
+$$
+
+$$
+U=
+Beta^{-1}
+\left(
+1-\frac{\alpha}{2},
+x+1,
+n-x
+\right)
+$$
+
+**Resultados e Discussões**
+
+Os intervalos de confiança permitem estimar parâmetros populacionais considerando a variabilidade amostral. Para médias e variâncias de populações normais utilizam-se as distribuições Normal, t, Qui-Quadrado e F. Para proporções Bernoulli, o intervalo aproximado é baseado no Teorema Central do Limite, enquanto o intervalo de Clopper-Pearson fornece uma alternativa exata.
+
+**Conclusão**
+
+A estimação intervalar é uma das principais ferramentas da inferência estatística. Ela fornece estimativas mais informativas do que estimativas pontuais, permitindo quantificar a incerteza associada aos parâmetros populacionais.
+
+
+
+
