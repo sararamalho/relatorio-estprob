@@ -42,7 +42,7 @@ Estudar a construção e aplicação de estimadores intervalares para parâmetro
 - Deduzir o intervalo de confiança para a variância populacional.
 - Deduzir intervalos para a diferença entre médias de duas populações normais independentes.
 - Deduzir intervalos para a razão entre variâncias populacionais.
-- Estudar intervalos aproximados e exatos para o parâmetro \(p\) de uma população Bernoulli.
+- Estudar intervalos aproximados e exatos para o parâmetro $p$ de uma população Bernoulli.
 - Implementar os procedimentos em R.
 - Relacionar os resultados com os conteúdos estudados anteriormente.
 - Apresentar aplicações práticas dos estimadores intervalares.
@@ -238,14 +238,14 @@ $$
 P(X=0)=1-p
 $$
 
-O estimador pontual de \(p\) é:
+O estimador pontual de $p$ é:
 
 $$
 \hat p=
 \frac{x}{n}
 $$
 
-onde \(x\) representa o número de sucessos observados.
+onde $x$ representa o número de sucessos observados.
 
 ---
 
