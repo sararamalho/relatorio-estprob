@@ -24,76 +24,112 @@ execute:
   message: false
 ---
 
-# Estimação Intervalar
+# Estimadores Intervalares para Populações Normais e Bernoulli
 
 **Introdução**
 
-A estimação intervalar é uma técnica da inferência estatística utilizada para estimar parâmetros populacionais por meio de intervalos de confiança. Diferentemente da estimação pontual, ela fornece uma faixa de valores plausíveis para o parâmetro de interesse, associada a um nível de confiança.
+A estimação intervalar é uma das principais ferramentas da Inferência Estatística. Seu objetivo é estimar parâmetros populacionais por meio de intervalos de confiança, fornecendo não apenas uma estimativa do parâmetro, mas também uma medida da incerteza associada ao processo de amostragem.
+
+Neste relatório são estudados intervalos de confiança para médias, variâncias, diferenças entre médias, razão entre variâncias e proporções populacionais. Além disso, são apresentadas implementações computacionais em R para ilustrar a aplicação prática dos métodos estudados.
 
 **Objetivo Geral**
 
-Estudar a construção de estimadores intervalares para médias, variâncias e proporções populacionais.
+Estudar a construção e aplicação de estimadores intervalares para parâmetros de populações normais e Bernoulli.
 
 **Objetivos Específicos**
 
-* Determinar o intervalo de confiança para a média populacional.
-* Determinar o intervalo de confiança para a variância populacional.
-* Construir intervalos para diferença entre médias.
-* Construir intervalos para razão entre variâncias.
-* Estudar intervalos aproximados e exatos para uma proporção Bernoulli.
+- Deduzir o intervalo de confiança para a média populacional com variância conhecida.
+- Deduzir o intervalo de confiança para a variância populacional.
+- Deduzir intervalos para a diferença entre médias de duas populações normais independentes.
+- Deduzir intervalos para a razão entre variâncias populacionais.
+- Estudar intervalos aproximados e exatos para o parâmetro \(p\) de uma população Bernoulli.
+- Implementar os procedimentos em R.
+- Relacionar os resultados com os conteúdos estudados anteriormente.
+- Apresentar aplicações práticas dos estimadores intervalares.
 
 **Fundamentação Teórica**
 
-**Média Populacional conhecida)**
+**Intervalo para a Média Populacional (\(\sigma^2\) conhecida)**
 
-Considere:
+Considere uma amostra aleatória proveniente de uma população normal:
 
 $$
 X_1,\ldots,X_n \sim N(\mu,\sigma^2)
 $$
 
-A estatística padronizada é:
+com variância populacional conhecida.
+
+A média amostral possui distribuição:
 
 $$
-Z=\frac{\bar X-\mu}{\sigma/\sqrt n}
+\bar X \sim N\left(\mu,\frac{\sigma^2}{n}\right)
 $$
 
-O intervalo de confiança para (\mu) é:
+Padronizando:
+
+$$
+Z=
+\frac{\bar X-\mu}
+{\sigma/\sqrt n}
+$$
+
+tem-se:
+
+$$
+Z \sim N(0,1)
+$$
+
+Logo, o intervalo de confiança para a média populacional é:
 
 $$
 IC(\mu)=
-\left[
-\bar X-z_{\alpha/2}\frac{\sigma}{\sqrt n},
-;
-\bar X+z_{\alpha/2}\frac{\sigma}{\sqrt n}
-\right]
+\bar X
+\pm
+z_{\alpha/2}
+\frac{\sigma}{\sqrt n}
 $$
 
-**Variância Populacional**
+---
 
-Sob normalidade:
+**Intervalo para a Variância Populacional**
+
+Se a população é normal, então:
 
 $$
-\chi^2=
 \frac{(n-1)S^2}{\sigma^2}
+\sim
+\chi^2_{n-1}
 $$
 
-O intervalo para (\sigma^2) é:
+Assim, o intervalo de confiança para a variância populacional é:
 
 $$
 IC(\sigma^2)=
 \left[
 \frac{(n-1)S^2}
 {\chi^2_{1-\alpha/2}},
-;
 \frac{(n-1)S^2}
 {\chi^2_{\alpha/2}}
 \right]
 $$
 
-**Diferença entre Médias (Homocedasticidade)**
+---
 
-Assumindo:
+**Diferença entre Médias Populacionais (Homocedasticidade)**
+
+Considere duas populações normais independentes:
+
+$$
+X_1,\ldots,X_{n_1}
+$$
+
+e
+
+$$
+Y_1,\ldots,Y_{n_2}
+$$
+
+assumindo:
 
 $$
 \sigma_1^2=\sigma_2^2
@@ -110,7 +146,7 @@ S_p^2=
 {n_1+n_2-2}
 $$
 
-O intervalo é:
+O intervalo de confiança para a diferença entre médias é:
 
 $$
 (\bar X-\bar Y)
@@ -124,15 +160,17 @@ S_p
 }
 $$
 
-**Diferença entre Médias (Heterocedasticidade)**
+---
 
-Quando:
+**Diferença entre Médias Populacionais (Heterocedasticidade)**
+
+Quando as variâncias não são iguais:
 
 $$
 \sigma_1^2 \neq \sigma_2^2
 $$
 
-utiliza-se o intervalo de Welch:
+utiliza-se o método de Welch:
 
 $$
 (\bar X-\bar Y)
@@ -145,51 +183,87 @@ t_{\alpha/2}
 }
 $$
 
-**Razão entre Variâncias**
+---
 
-A estatística utilizada é:
+**Razão entre Variâncias Populacionais**
 
-$$
-F=
-\frac{S_1^2/\sigma_1^2}
-{S_2^2/\sigma_2^2}
-$$
-
-O intervalo para:
+Sabendo que:
 
 $$
-\frac{\sigma_1^2}{\sigma_2^2}
+\frac{
+S_1^2/\sigma_1^2
+}
+{
+S_2^2/\sigma_2^2
+}
+\sim F
 $$
 
-é:
+o intervalo para a razão entre variâncias é:
 
 $$
+IC
+\left(
+\frac{\sigma_1^2}
+{\sigma_2^2}
+\right)
+=
 \left[
 \frac{S_1^2}{S_2^2}
 \frac1{F_{1-\alpha/2}},
-;
 \frac{S_1^2}{S_2^2}
 \frac1{F_{\alpha/2}}
 \right]
 $$
 
+---
+
 **População Bernoulli**
 
-Para:
+Considere:
 
 $$
 X \sim Bernoulli(p)
 $$
 
-o estimador de (p) é:
+onde:
 
 $$
-\hat p=\frac{x}{n}
+P(X=1)=p
 $$
 
-**Intervalo Aproximado**
+e
 
-Baseado no Teorema Central do Limite:
+$$
+P(X=0)=1-p
+$$
+
+O estimador pontual de \(p\) é:
+
+$$
+\hat p=
+\frac{x}{n}
+$$
+
+onde \(x\) representa o número de sucessos observados.
+
+---
+
+**Intervalo Aproximado para \(p\)**
+
+Pelo Teorema Central do Limite:
+
+$$
+\hat p
+\approx
+N
+\left(
+p,
+\frac{p(1-p)}{n}
+\right)
+$$
+
+resultando no intervalo:
 
 $$
 IC(p)=
@@ -197,43 +271,176 @@ IC(p)=
 \pm
 z_{\alpha/2}
 \sqrt{
-\frac{\hat p(1-\hat p)}
+\frac{
+\hat p(1-\hat p)
+}
 {n}
 }
 $$
 
-**Intervalo Exato (Clopper-Pearson)**
+---
 
-Os limites são obtidos pela distribuição Beta:
+**Fundamento do Intervalo Aproximado**
+
+O intervalo aproximado é fundamentado no Teorema Central do Limite, segundo o qual a distribuição amostral da proporção tende à normalidade quando o tamanho da amostra é suficientemente grande.
+
+---
+
+**Intervalo Exato para \(p\)**
+
+Uma alternativa é o método de Clopper-Pearson, baseado diretamente na distribuição binomial.
+
+Esse método produz intervalos exatos, sendo especialmente útil quando o tamanho amostral é pequeno ou quando a proporção está próxima de 0 ou 1.
+
+**Relação com o Relatório 6**
+
+Os resultados deste relatório estão diretamente relacionados às distribuições Qui-Quadrado e F de Fisher estudadas anteriormente.
+
+A distribuição Qui-Quadrado é utilizada na construção do intervalo de confiança para a variância populacional, pois:
 
 $$
-L=
-Beta^{-1}
-\left(
-\frac{\alpha}{2},
-x,
-n-x+1
-\right)
+\frac{(n-1)S^2}{\sigma^2}
+\sim
+\chi^2_{n-1}
 $$
 
+Já a distribuição F de Fisher é utilizada na construção do intervalo para a razão entre duas variâncias:
+
 $$
-U=
-Beta^{-1}
-\left(
-1-\frac{\alpha}{2},
-x+1,
-n-x
-\right)
+\frac{
+S_1^2/\sigma_1^2
+}
+{
+S_2^2/\sigma_2^2
+}
+\sim
+F
 $$
+
+Portanto, os conceitos estudados no relatório anterior constituem a base teórica necessária para a construção dos estimadores intervalares apresentados neste trabalho.
+
+**Implementação em R**
+
+**Intervalo para a Média Populacional**
+
+O código abaixo simula uma amostra normal, calcula a média amostral e constrói um intervalo de confiança de 95% para a média populacional.
+
+```{r}
+set.seed(123)
+
+x <- rnorm(30, mean = 100, sd = 15)
+
+media <- mean(x)
+sigma <- 15
+n <- length(x)
+
+erro <- qnorm(0.975) * sigma / sqrt(n)
+
+IC <- c(media - erro, media + erro)
+
+cat("Média amostral =", round(media,2), "\n")
+cat("IC de 95% para a média = [",
+    round(IC[1],2), ",",
+    round(IC[2],2), "]")
+```
+
+**Intervalo para a Variância Populacional**
+
+O código calcula a variância amostral e utiliza a distribuição Qui-Quadrado para obter um intervalo de confiança para a variância populacional.
+
+```{r}
+s2 <- var(x)
+n <- length(x)
+
+LI <- (n-1)*s2/qchisq(0.975,n-1)
+LS <- (n-1)*s2/qchisq(0.025,n-1)
+
+cat("Variância amostral =", round(s2,2), "\n")
+cat("IC de 95% para a variância = [",
+    round(LI,2), ",",
+    round(LS,2), "]")
+```
+
+**Diferença entre Médias (Variâncias Iguais)**
+
+São simuladas duas populações normais independentes e calculado o intervalo para a diferença entre médias.
+
+```{r}
+x <- rnorm(20,100,10)
+y <- rnorm(20,105,10)
+
+resultado <- t.test(x,y,var.equal=TRUE)
+
+resultado$conf.int
+```
+
+O intervalo obtido representa valores plausíveis para a diferença entre as médias populacionais.
+
+**Diferença entre Médias (Variâncias Diferentes)**
+
+Quando não se assume igualdade entre as variâncias:
+
+```{r}
+resultado <- t.test(x,y,var.equal=FALSE)
+
+resultado$conf.int
+```
+
+Neste caso é utilizado o procedimento de Welch.
+
+**Razão entre Variâncias**
+
+O código abaixo calcula um intervalo para a razão entre as variâncias das duas populações.
+
+```{r}
+resultado <- var.test(x,y)
+
+resultado$conf.int
+```
+
+A construção desse intervalo utiliza a distribuição F de Fisher.
+
+**Estimativa para uma Proporção Bernoulli**
+
+O exemplo simula uma população Bernoulli com probabilidade de sucesso igual a 0,7.
+
+```{r}
+dados <- rbinom(100,1,0.7)
+
+sucessos <- sum(dados)
+
+prop.test(sucessos,100)
+```
+
+O resultado fornece uma estimativa para \(p\) e seu respectivo intervalo de confiança.
 
 **Resultados e Discussões**
 
-Os intervalos de confiança permitem estimar parâmetros populacionais considerando a variabilidade amostral. Para médias e variâncias de populações normais utilizam-se as distribuições Normal, t, Qui-Quadrado e F. Para proporções Bernoulli, o intervalo aproximado é baseado no Teorema Central do Limite, enquanto o intervalo de Clopper-Pearson fornece uma alternativa exata.
+Os resultados mostram que os intervalos de confiança fornecem uma faixa de valores plausíveis para os parâmetros populacionais.
+
+Observa-se que amostras maiores produzem intervalos mais estreitos, indicando maior precisão nas estimativas. Os intervalos para variância dependem diretamente da distribuição Qui-Quadrado, enquanto os intervalos para razão entre variâncias dependem da distribuição F de Fisher.
+
+Nos casos envolvendo duas populações, a escolha entre o método clássico e o método de Welch depende da hipótese de igualdade ou desigualdade entre as variâncias.
+
+Para populações Bernoulli, o Teorema Central do Limite permite construir intervalos aproximados para a proporção populacional, enquanto o método de Clopper-Pearson fornece uma alternativa exata.
+
+**Aplicações na Área de Atuação**
+
+Na Engenharia e nas Ciências Aplicadas, os estimadores intervalares são utilizados para:
+
+- Controle estatístico de processos;
+- Avaliação da qualidade de produtos;
+- Comparação de tratamentos experimentais;
+- Estudos de confiabilidade;
+- Análise de desempenho de equipamentos;
+- Validação de modelos matemáticos;
+- Pesquisas de opinião e estudos epidemiológicos.
+
+Essas aplicações permitem que decisões sejam tomadas considerando a incerteza presente nos dados observados.
 
 **Conclusão**
 
-A estimação intervalar é uma das principais ferramentas da inferência estatística. Ela fornece estimativas mais informativas do que estimativas pontuais, permitindo quantificar a incerteza associada aos parâmetros populacionais.
+Os estimadores intervalares constituem ferramentas fundamentais da Inferência Estatística, permitindo estimar parâmetros populacionais com uma medida explícita de precisão.
 
-
-
+A construção desses intervalos depende das distribuições Normal, Qui-Quadrado, t de Student, F de Fisher e Binomial, evidenciando a importância dos conceitos estudados ao longo da disciplina para a análise e interpretação de dados reais.
 
