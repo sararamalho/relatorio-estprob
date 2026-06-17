@@ -171,3 +171,4 @@ Relatórios desenvolvidos:
 - [Relatório 05 (19/05/2026)](rel05/index.html){target="_blank"}
 - [Relatório 06 (26/05/2026)](rel06/index.html){target="_blank"}
 - [Relatório 07 (05/06/2026)](rel07/index.html){target="_blank"}
+- [Materiais Elétricos (19/06/2026)](rel06/index.html){target="_blank"}
